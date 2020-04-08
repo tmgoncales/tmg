@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should expand and collapse dangerous link 1`] = `
+<li>
+  <a
+    className="link-with-icon"
+    href="javascript:alert(\\"hi\\")"
+    onClick={[Function]}
+    rel="nofollow noreferrer noopener"
+    target="_blank"
+    title="Dangerous"
+  >
+    <ProjectLinkIcon
+      className="little-spacer-right"
+      type="dangerous"
+    />
+    Dangerous
+  </a>
+</li>
+`;
+
+exports[`should expand and collapse dangerous link 2`] = `
+<li>
+  <a
+    className="link-with-icon"
+    href="javascript:alert(\\"hi\\")"
+    onClick={[Function]}
+    rel="nofollow noreferrer noopener"
+    target="_blank"
+    title="Dangerous"
+  >
+    <ProjectLinkIcon
+      className="little-spacer-right"
+      type="dangerous"
+    />
+    Dangerous
+  </a>
+  <div
+    className="little-spacer-top display-flex-center"
+  >
+    <input
+      className="overview-key width-80"
+      onClick={[Function]}
+      readOnly={true}
+      type="text"
+      value="javascript:alert(\\"hi\\")"
+    />
+    <ClearButton
+      className="little-spacer-left"
+      onClick={[Function]}
+    />
+  </div>
+</li>
+`;
+
+exports[`should expand and collapse dangerous link 3`] = `
+<li>
+  <a
+    className="link-with-icon"
+    href="javascript:alert(\\"hi\\")"
+    onClick={[Function]}
+    rel="nofollow noreferrer noopener"
+    target="_blank"
+    title="Dangerous"
+  >
+    <ProjectLinkIcon
+      className="little-spacer-right"
+      type="dangerous"
+    />
+    Dangerous
+  </a>
+</li>
+`;
+
+exports[`should match snapshot 1`] = `
+<li>
+  <a
+    className="link-with-icon"
+    href="http://example.com"
+    rel="nofollow noreferrer noopener"
+    target="_blank"
+    title="Foo"
+  >
+    <ProjectLinkIcon
+      className="little-spacer-right"
+      type="foo"
+    />
+    Foo
+  </a>
+</li>
+`;
+
+exports[`should match snapshot 2`] = `
+<li>
+  <a
+    className="link-with-icon"
+    href="http://example.com"
+    rel="nofollow noreferrer noopener"
+    target="_blank"
+    title="Foo"
+  >
+    <ProjectLinkIcon
+      className="little-spacer-right"
+      type="foo"
+    />
+  </a>
+</li>
+`;
+
+exports[`should render dangerous links as plaintext 1`] = `
+<li>
+  <a
+    className="link-with-icon"
+    href="javascript:alert(\\"hi\\")"
+    onClick={[Function]}
+    rel="nofollow noreferrer noopener"
+    target="_blank"
+    title="Dangerous"
+  >
+    <ProjectLinkIcon
+      className="little-spacer-right"
+      type="dangerous"
+    />
+    Dangerous
+  </a>
+</li>
+`;

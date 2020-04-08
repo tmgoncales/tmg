@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly: editing 1`] = `
+<DeferredSpinner
+  loading={false}
+  timeout={100}
+>
+  <EscKeydownHandler
+    onKeydown={[MockFunction]}
+  >
+    <OutsideClickHandler
+      onClickOutside={[MockFunction]}
+    >
+      <AssigneeSelection
+        allowCurrentUserSelection={false}
+        loggedInUser={
+          Object {
+            "groups": Array [],
+            "isLoggedIn": true,
+            "login": "luke",
+            "name": "Skywalker",
+            "scmAccounts": Array [],
+          }
+        }
+        onSelect={[MockFunction]}
+      />
+    </OutsideClickHandler>
+  </EscKeydownHandler>
+</DeferredSpinner>
+`;
+
+exports[`should render correctly: not editing 1`] = `
+<DeferredSpinner
+  loading={false}
+  timeout={100}
+>
+  <div
+    className="display-flex-center"
+  >
+    <strong
+      className="nowrap"
+    >
+      user.x_deleted.Skywalker
+    </strong>
+    <EditButton
+      className="spacer-left"
+      onClick={[MockFunction]}
+    />
+  </div>
+</DeferredSpinner>
+`;
+
+exports[`should render correctly: with active assignee 1`] = `
+<DeferredSpinner
+  loading={false}
+  timeout={100}
+>
+  <div
+    className="display-flex-center"
+  >
+    <strong
+      className="nowrap"
+    >
+      John Doe
+    </strong>
+    <EditButton
+      className="spacer-left"
+      onClick={[MockFunction]}
+    />
+  </div>
+</DeferredSpinner>
+`;
+
+exports[`should render correctly: without current assignee 1`] = `
+<DeferredSpinner
+  loading={false}
+  timeout={100}
+>
+  <div
+    className="display-flex-center"
+  >
+    <strong
+      className="nowrap"
+    >
+      unassigned
+    </strong>
+    <EditButton
+      className="spacer-left"
+      onClick={[MockFunction]}
+    />
+  </div>
+</DeferredSpinner>
+`;

@@ -1,0 +1,242 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2020 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.issue {
+  position: relative;
+  padding-top: var(--gridSize);
+  padding-bottom: var(--gridSize);
+  background-color: var(--issueBgColor);
+  transition: all 0.3s ease, border 0s ease;
+}
+
+.issue.hotspot {
+  background-color: var(--hotspotBgColor);
+}
+
+.issue.selected {
+  box-shadow: none;
+  outline: none;
+  border: 2px solid var(--blue) !important;
+}
+
+.issue + .issue,
+.issue-container + .issue-container {
+  margin-top: 5px;
+}
+
+.issue.selected + .issue {
+  border-top-color: transparent;
+}
+
+.issue-row {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.issue-row-meta {
+  flex-grow: 0;
+  padding-right: 5px;
+  white-space: nowrap;
+}
+
+.issue-message {
+  flex-grow: 1;
+  padding-left: var(--gridSize);
+  padding-right: var(--gridSize);
+  line-height: 18px;
+  font-size: var(--baseFontSize);
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+.issue-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: var(--gridSize);
+}
+
+.issue-meta-list {
+  display: flex;
+  align-items: center;
+}
+
+.issue-meta {
+  line-height: 16px;
+  font-size: var(--smallFontSize);
+}
+
+.issue-meta + .issue-meta {
+  margin-left: var(--gridSize);
+}
+
+.issue-meta-label {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 180px;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.issue-see-rule {
+  border-bottom: none;
+  font-size: var(--smallFontSize);
+}
+
+.issue-changelog {
+  width: 450px;
+  max-height: 320px;
+  overflow: auto;
+  white-space: normal;
+}
+
+.issue-comments {
+  margin-top: 5px;
+  padding-left: var(--gridSize);
+  font-size: var(--smallFontSize);
+}
+
+.issue-comment {
+  display: flex;
+}
+
+.issue-comment + .issue-comment {
+  margin-top: 4px;
+}
+
+.issue-comment-author {
+  flex-shrink: 0;
+  max-width: 130px;
+  line-height: 18px;
+  color: var(--secondFontColor);
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.issue-comment-age {
+  flex-shrink: 0;
+  line-height: 18px;
+  white-space: nowrap;
+  color: var(--secondFontColor);
+}
+
+.issue-comment-text {
+  flex: 1;
+  min-width: 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 18px;
+  line-height: 1.5;
+  overflow: hidden;
+  outline: none;
+  word-break: break-all;
+}
+
+.issue-comment-text.markdown pre {
+  float: none;
+  height: auto;
+  margin: 0;
+  padding: var(--gridSize);
+  background-color: var(--codeBackground);
+  border: none;
+  border-radius: 3px;
+}
+
+.issue-comment-text.markdown br ~ pre {
+  margin-top: var(--gridSize);
+}
+
+.issue-comment-actions {
+  flex-shrink: 0;
+  padding-left: 5px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.issue-comment-bubble-popup {
+  width: 440px;
+  font-size: var(--smallFontSize);
+}
+
+.issue-comment-form-text textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.issue-comment-form-footer {
+  margin-top: 5px;
+  line-height: 22px;
+}
+
+.issue-comment-form-footer:before,
+.issue-comment-form-footer:after {
+  display: table;
+  content: '';
+  line-height: 0;
+}
+
+.issue-comment-form-footer:after {
+  clear: both;
+}
+
+.issue-comment-form-actions {
+  float: right;
+}
+
+.issue-comment-form-tips {
+  float: left;
+}
+
+.issue-with-checkbox {
+  padding-left: 24px;
+}
+
+.issue-with-checkbox .issue-checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.issue-checkbox-container {
+  display: none;
+  position: absolute;
+  width: 28px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border: none;
+}
+
+.issue-checkbox-container:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.issue:not(.selected) .location-index {
+  background-color: var(--gray60);
+}
+
+.issue .menu:not(.issues-similar-issues-menu):not(.issue-changelog) {
+  max-height: 120px;
+  overflow: auto;
+}

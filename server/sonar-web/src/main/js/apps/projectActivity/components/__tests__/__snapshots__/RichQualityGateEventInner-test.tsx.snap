@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<Fragment>
+  <span
+    className="note spacer-right"
+  >
+    event.category.QUALITY_GATE
+    :
+  </span>
+  <FormattedMessage
+    defaultMessage="event.quality_gate.still_x"
+    id="event.quality_gate.still_x"
+    values={
+      Object {
+        "status": <Level
+          level="ERROR"
+          small={true}
+        />,
+      }
+    }
+  />
+  <div>
+    <ResetButtonLink
+      className="project-activity-event-inner-more-link"
+      onClick={[Function]}
+      stopPropagation={true}
+    >
+      more
+      <DropdownIcon
+        className="little-spacer-left"
+        turned={false}
+      />
+    </ResetButtonLink>
+  </div>
+</Fragment>
+`;
+
+exports[`should render 2`] = `
+<Fragment>
+  <span
+    className="note spacer-right"
+  >
+    event.category.QUALITY_GATE
+    :
+  </span>
+  <FormattedMessage
+    defaultMessage="event.quality_gate.still_x"
+    id="event.quality_gate.still_x"
+    values={
+      Object {
+        "status": <Level
+          level="ERROR"
+          small={true}
+        />,
+      }
+    }
+  />
+  <div>
+    <ResetButtonLink
+      className="project-activity-event-inner-more-link"
+      onClick={[Function]}
+      stopPropagation={true}
+    >
+      hide
+      <DropdownIcon
+        className="little-spacer-left"
+        turned={true}
+      />
+    </ResetButtonLink>
+  </div>
+  <ul
+    className="spacer-left spacer-top"
+  >
+    <li
+      className="display-flex-center spacer-top"
+      key="foo"
+    >
+      <Level
+        aria-label="quality_gates.status"
+        className="spacer-right"
+        level="ERROR"
+        small={true}
+      />
+      <div
+        className="flex-1 text-ellipsis"
+      >
+        <Link
+          onClick={[Function]}
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          title="Foo"
+          to={
+            Object {
+              "pathname": "/dashboard",
+              "query": Object {
+                "branch": "master",
+                "id": "foo",
+              },
+            }
+          }
+        >
+          <span
+            aria-label="project_x.Foo"
+          >
+            Foo
+          </span>
+        </Link>
+      </div>
+    </li>
+    <li
+      className="display-flex-center spacer-top"
+      key="bar"
+    >
+      <Level
+        aria-label="quality_gates.status"
+        className="spacer-right"
+        level="ERROR"
+        small={true}
+      />
+      <div
+        className="flex-1 text-ellipsis"
+      >
+        <Link
+          onClick={[Function]}
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          title="Bar"
+          to={
+            Object {
+              "pathname": "/dashboard",
+              "query": Object {
+                "branch": "master",
+                "id": "bar",
+              },
+            }
+          }
+        >
+          <span
+            aria-label="project_x.Bar"
+          >
+            Bar
+          </span>
+        </Link>
+      </div>
+    </li>
+  </ul>
+</Fragment>
+`;

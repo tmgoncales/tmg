@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display a pending plugin notif 1`] = `
+<PendingPluginsActionNotif
+  fetchSystemStatus={[MockFunction]}
+  pending={
+    Object {
+      "installing": Array [
+        Object {
+          "implementationBuild": "1",
+          "key": "foo",
+          "name": "Foo",
+          "version": "1.0",
+        },
+      ],
+      "removing": Array [],
+      "updating": Array [],
+    }
+  }
+  refreshPending={[MockFunction]}
+  systemStatus="UP"
+/>
+`;
+
+exports[`should display restart notif 1`] = `<SystemRestartNotif />`;
+
+exports[`should work with extensions 1`] = `
+<ContextNavBar
+  height={72}
+  id="context-navigation"
+>
+  <header
+    className="navbar-context-header"
+  >
+    <h1>
+      layout.settings
+    </h1>
+  </header>
+  <NavBarTabs>
+    <Dropdown
+      overlay={
+        <ul
+          className="menu"
+        >
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/settings"
+            >
+              settings.page
+            </IndexLink>
+          </li>
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/settings/encryption"
+            >
+              property.category.security.encryption
+            </IndexLink>
+          </li>
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/custom_metrics"
+            >
+              custom_metrics.page
+            </IndexLink>
+          </li>
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/webhooks"
+            >
+              webhooks.page
+            </IndexLink>
+          </li>
+          <li>
+            <Link
+              activeClassName="active"
+              onlyActiveOnIndex={false}
+              style={Object {}}
+              to="/admin/extension/foo"
+            >
+              Foo
+            </Link>
+          </li>
+        </ul>
+      }
+      tagName="li"
+    >
+      <Component />
+    </Dropdown>
+    <Dropdown
+      overlay={
+        <ul
+          className="menu"
+        >
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/users"
+            >
+              users.page
+            </IndexLink>
+          </li>
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/groups"
+            >
+              user_groups.page
+            </IndexLink>
+          </li>
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/permissions"
+            >
+              global_permissions.page
+            </IndexLink>
+          </li>
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/permission_templates"
+            >
+              permission_templates
+            </IndexLink>
+          </li>
+        </ul>
+      }
+      tagName="li"
+    >
+      <Component />
+    </Dropdown>
+    <Dropdown
+      overlay={
+        <ul
+          className="menu"
+        >
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/projects_management"
+            >
+              management
+            </IndexLink>
+          </li>
+          <li>
+            <IndexLink
+              activeClassName="active"
+              to="/admin/background_tasks"
+            >
+              background_tasks.page
+            </IndexLink>
+          </li>
+        </ul>
+      }
+      tagName="li"
+    >
+      <Component />
+    </Dropdown>
+    <li>
+      <IndexLink
+        activeClassName="active"
+        to="/admin/system"
+      >
+        sidebar.system
+      </IndexLink>
+    </li>
+    <li>
+      <IndexLink
+        activeClassName="active"
+        to="/admin/marketplace"
+      >
+        marketplace.page
+      </IndexLink>
+    </li>
+  </NavBarTabs>
+</ContextNavBar>
+`;
+
+exports[`should work with extensions 2`] = `
+Array [
+  <Dropdown
+    overlay={
+      <ul
+        className="menu"
+      >
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/settings"
+          >
+            settings.page
+          </IndexLink>
+        </li>
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/settings/encryption"
+          >
+            property.category.security.encryption
+          </IndexLink>
+        </li>
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/custom_metrics"
+          >
+            custom_metrics.page
+          </IndexLink>
+        </li>
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/webhooks"
+          >
+            webhooks.page
+          </IndexLink>
+        </li>
+        <li>
+          <Link
+            activeClassName="active"
+            onlyActiveOnIndex={false}
+            style={Object {}}
+            to="/admin/extension/foo"
+          >
+            Foo
+          </Link>
+        </li>
+      </ul>
+    }
+    tagName="li"
+  >
+    <Component />
+  </Dropdown>,
+  <Dropdown
+    overlay={
+      <ul
+        className="menu"
+      >
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/users"
+          >
+            users.page
+          </IndexLink>
+        </li>
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/groups"
+          >
+            user_groups.page
+          </IndexLink>
+        </li>
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/permissions"
+          >
+            global_permissions.page
+          </IndexLink>
+        </li>
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/permission_templates"
+          >
+            permission_templates
+          </IndexLink>
+        </li>
+      </ul>
+    }
+    tagName="li"
+  >
+    <Component />
+  </Dropdown>,
+  <Dropdown
+    overlay={
+      <ul
+        className="menu"
+      >
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/projects_management"
+          >
+            management
+          </IndexLink>
+        </li>
+        <li>
+          <IndexLink
+            activeClassName="active"
+            to="/admin/background_tasks"
+          >
+            background_tasks.page
+          </IndexLink>
+        </li>
+      </ul>
+    }
+    tagName="li"
+  >
+    <Component />
+  </Dropdown>,
+]
+`;

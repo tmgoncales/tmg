@@ -1,0 +1,337 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2020 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.issues-main-header .component-name {
+  line-height: var(--controlHeight);
+}
+
+.issues-main-header-spinner {
+  margin-right: 2px;
+}
+
+.concise-issues-list-header-inner {
+  width: 260px;
+  text-align: center;
+}
+
+.concise-issues-list-header .spinner {
+  margin-top: 4px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.concise-issues-list-header-button {
+  border: none;
+}
+
+.concise-issues-list-header-button path {
+  fill: var(--secondFontColor);
+  transition: fill 0.3s ease;
+}
+
+.concise-issues-list-header-button:hover path {
+  fill: var(--blue);
+}
+
+.concise-issue-component {
+  margin-top: calc(var(--gridSize) * 2);
+  margin-bottom: calc(var(--gridSize) / 2);
+  padding-left: var(--gridSize);
+  padding-right: var(--gridSize);
+}
+
+.concise-issue-box {
+  position: relative;
+  z-index: var(--belowNormalZIndex);
+  margin-bottom: calc(var(--gridSize) / 2);
+  padding: calc(var(--gridSize) - 1px);
+  border: 2px solid var(--barBorderColor);
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.concise-issue-box:hover {
+  border: 2px dashed var(--blue);
+}
+
+.concise-issue-box:focus {
+  outline: none;
+}
+
+.concise-issue-box.selected {
+  z-index: var(--normalZIndex);
+  border: 2px solid var(--blue);
+  cursor: default;
+}
+
+.concise-issue-box-message {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.concise-issue-box-message:focus {
+  outline: none;
+}
+
+.concise-issue-box.selected .concise-issue-box-message {
+  cursor: pointer;
+}
+
+.concise-issue-box-attributes {
+  margin-top: var(--gridSize);
+  line-height: 16px;
+  font-size: var(--smallFontSize);
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.concise-issue-box:not(.selected) .location-index {
+  background-color: #ccc;
+}
+
+.concise-issue-locations {
+  display: inline-block;
+  margin-bottom: -4px;
+  margin-left: var(--gridSize);
+}
+
+.concise-issue-box-attributes > .location-index {
+  margin-bottom: 4px;
+  margin-right: 4px;
+}
+
+.concise-issue-box-attributes > .concise-issue-expand {
+  background-color: transparent;
+  border: 1px solid var(--conciseIssueRed);
+  height: 16px;
+  color: var(--conciseIssueRed);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 8px;
+  padding-bottom: 6px;
+}
+
+.concise-issue-box-attributes > .concise-issue-expand:hover {
+  background-color: var(--conciseIssueRed);
+  color: white;
+}
+
+.concise-issue-locations-navigator-location {
+  position: relative;
+  z-index: var(--aboveNormalZIndex);
+  display: inline-flex;
+  align-items: flex-start;
+  max-width: 100%;
+  border: none;
+}
+
+.concise-issue-locations-navigator-file {
+  position: relative;
+}
+
+.concise-issue-locations-navigator-file + .concise-issue-locations-navigator-file {
+  margin-top: calc(1.5 * var(--gridSize));
+}
+
+.concise-issue-locations-navigator-file:not(:last-child)::before {
+  position: absolute;
+  display: block;
+  width: 0;
+  top: 13px;
+  bottom: calc(-2 * var(--gridSize));
+  left: 4px;
+  border-left: 1px dotted var(--conciseIssueRed);
+  content: '';
+}
+
+.concise-issue-location-file {
+  height: calc(2 * var(--gridSize));
+  padding-bottom: calc(0.5 * var(--gridSize));
+  font-size: var(--smallFontSize);
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.concise-issue-location-file-circle,
+.concise-issue-location-file-circle-multiple,
+.concise-issue-location-file-circle-multiple::before,
+.concise-issue-location-file-circle-multiple::after {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: calc(1px + var(--gridSize));
+  height: calc(1px + var(--gridSize));
+  border: 1px solid var(--conciseIssueRed);
+  border-radius: 100%;
+  box-sizing: border-box;
+  background-color: var(--issueBgColor);
+}
+
+.concise-issue-location-file-circle-multiple {
+  top: -2px;
+}
+
+.concise-issue-location-file-circle-multiple::before {
+  position: absolute;
+  z-index: calc(5 + var(--normalZIndex));
+  top: 2px;
+  left: -1px;
+  content: '';
+}
+
+.concise-issue-location-file-circle-multiple::after {
+  position: absolute;
+  z-index: calc(5 + var(--aboveNormalZIndex));
+  top: 5px;
+  left: -1px;
+  content: '';
+}
+
+.concise-issue-location-file-locations {
+  padding-left: calc(2 * var(--gridSize));
+}
+
+.concise-issue-location-file-more {
+  border-color: rgba(209, 133, 130, 0.2);
+  color: rgb(209, 133, 130) !important;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.concise-issue-location-file-more:hover,
+.concise-issue-location-file-more:focus {
+  border-color: rgba(209, 133, 130, 0.6);
+}
+
+.component-source-container {
+  border: 1px solid var(--gray80);
+}
+
+.component-source-container + .component-source-container {
+  margin-top: var(--gridSize);
+}
+
+.component-source-container-header {
+  background-color: var(--gray94);
+  padding: var(--gridSize);
+}
+
+.issues-my-issues-filter {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.issues-page-actions {
+  display: inline-block;
+  min-width: 80px;
+  text-align: right;
+}
+
+.issues .issue-list {
+  /* no math, just a good guess */
+  min-width: 640px;
+  width: 800px;
+}
+
+.issues .issue {
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.issues .issue:focus-within,
+.issues .issue:hover {
+  border: 2px dashed var(--blue);
+  transition: all 0.3s ease;
+  outline: 0;
+}
+
+.issues .issue a:focus,
+.issues .issue button:focus {
+  box-shadow: none;
+  outline: 1px dotted var(--blue);
+}
+
+@media (max-width: 1320px) {
+  .issues .issue-list {
+    width: calc(60vw - 40px);
+  }
+}
+
+.issue-location {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  background-color: var(--issueBgColor);
+  transition: background-color 0.3s ease;
+}
+
+.issues-workspace-list-component {
+  padding: 10px 10px 6px;
+}
+
+.issues-workspace-list-item + .issues-workspace-list-item {
+  margin-top: 5px;
+}
+
+.issues-workspace-list-component + .issues-workspace-list-item {
+  margin-top: 10px;
+}
+
+.issues-workspace-list-item:first-child .issues-workspace-list-component {
+  padding-top: 0;
+}
+
+.issues-workspace-list-component + .issues-workspace-list-item {
+  margin-top: 0;
+}
+
+.issues-predefined-periods {
+  display: flex;
+}
+
+.issues-predefined-periods .search-navigator-facet {
+  width: auto;
+  margin-right: calc(var(--gridSize) / 2);
+}
+
+.bulk-change-radio-button {
+  margin: 0 calc(- var(--gridSize) / 2);
+  padding: 0 calc(var(--gridSize) / 2);
+}
+
+.bulk-change-radio-button:hover {
+  background-color: var(--barBackgroundColor);
+}
+
+.navigation-keyboard-shortcuts > span {
+  background-color: var(--transparentGray);
+  border-radius: 16px;
+  display: inline-block;
+  font-size: var(--smallFontSize);
+  height: 16px;
+  padding: calc(var(--gridSize) / 2) var(--gridSize);
+}

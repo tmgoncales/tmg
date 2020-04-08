@@ -1,0 +1,217 @@
+{
+  "name": "SonarQube",
+  "version": "0.0.1",
+  "description": "Put your technical debt under control",
+  "repository": "SonarSource/sonarqube",
+  "license": "LGPL-3.0",
+  "dependencies": {
+    "@emotion/core": "10.0.28",
+    "@emotion/styled": "10.0.27",
+    "classnames": "2.2.6",
+    "core-js": "3.6.4",
+    "create-react-class": "15.6.3",
+    "d3-scale": "3.2.1",
+    "date-fns": "1.30.1",
+    "dompurify": "2.0.8",
+    "emotion-theming": "10.0.27",
+    "history": "3.3.0",
+    "keymaster": "1.6.2",
+    "lodash": "4.17.15",
+    "lunr": "2.3.8",
+    "mdast-util-toc": "5.0.2",
+    "prop-types": "15.7.2",
+    "react": "16.13.0",
+    "react-countup": "4.3.3",
+    "react-day-picker": "7.3.0",
+    "react-dom": "16.13.0",
+    "react-draggable": "4.2.0",
+    "react-helmet-async": "1.0.4",
+    "react-intl": "2.8.0",
+    "react-redux": "5.1.1",
+    "react-router": "3.2.6",
+    "react-virtualized": "9.21.2",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0",
+    "regenerator-runtime": "0.13.5",
+    "rehype-raw": "4.0.2",
+    "rehype-react": "5.0.0",
+    "remark-custom-blocks": "2.5.0",
+    "remark-rehype": "6.0.0",
+    "remark-slug": "5.1.2",
+    "sonar-ui-common": "0.0.57",
+    "unist-util-visit": "2.0.2",
+    "valid-url": "1.0.9",
+    "whatwg-fetch": "3.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.8.7",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-transform-react-constant-elements": "7.8.3",
+    "@babel/plugin-transform-react-jsx-self": "7.8.3",
+    "@babel/plugin-transform-react-jsx-source": "7.8.3",
+    "@babel/preset-env": "7.8.7",
+    "@babel/preset-react": "7.8.3",
+    "@types/classnames": "2.2.10",
+    "@types/d3-scale": "2.2.0",
+    "@types/d3-selection": "1.4.1",
+    "@types/d3-zoom": "1.7.4",
+    "@types/dompurify": "2.0.1",
+    "@types/enzyme": "3.10.5",
+    "@types/jest": "25.1.4",
+    "@types/keymaster": "1.6.28",
+    "@types/lodash": "4.14.149",
+    "@types/prop-types": "15.7.3",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.4",
+    "@types/react-helmet": "5.0.15",
+    "@types/react-intl": "2.3.17",
+    "@types/react-redux": "6.0.6",
+    "@types/react-router": "3.0.20",
+    "@types/react-virtualized": "9.21.8",
+    "@types/sanitize-html": "1.22.0",
+    "@types/valid-url": "1.0.2",
+    "@typescript-eslint/parser": "2.24.0",
+    "autoprefixer": "9.7.4",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "25.1.0",
+    "babel-loader": "8.0.6",
+    "babel-plugin-dynamic-import-node": "2.3.0",
+    "babel-plugin-lodash": "3.3.4",
+    "chalk": "3.0.0",
+    "clean-webpack-plugin": "2.0.1",
+    "copy-webpack-plugin": "5.1.1",
+    "css-loader": "3.4.2",
+    "cssnano": "4.1.10",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "enzyme-to-json": "3.4.4",
+    "escape-string-regexp": "2.0.0",
+    "eslint": "6.8.0",
+    "eslint-config-sonarqube": "0.5.1",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0",
+    "eslint-plugin-sonarjs": "0.5.0",
+    "expose-loader": "0.7.5",
+    "glob": "7.1.6",
+    "glob-promise": "3.4.0",
+    "html-webpack-plugin": "3.2.0",
+    "jest": "25.1.0",
+    "lint-staged": "7.3.0",
+    "lodash-webpack-plugin": "0.11.5",
+    "mini-css-extract-plugin": "0.9.0",
+    "postcss-calc": "7.0.2",
+    "postcss-custom-properties": "9.1.1",
+    "postcss-loader": "3.0.0",
+    "prettier": "1.19.1",
+    "raw-loader": "3.1.0",
+    "react-dev-utils": "5.0.1",
+    "react-error-overlay": "1.0.7",
+    "react-test-renderer": "16.13.0",
+    "remark": "11.0.2",
+    "remark-react": "6",
+    "style-loader": "1.1.3",
+    "ts-jest": "25.2.1",
+    "ts-loader": "6.2.1",
+    "typescript": "3.8.3",
+    "webpack": "4.42.0",
+    "webpack-bundle-analyzer": "3.6.1",
+    "webpack-dev-server": "3.10.3"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "build-release": "node scripts/build.js release",
+    "test": "jest",
+    "format": "prettier --write --list-different \"src/main/js/**/*.{js,ts,tsx,css}\"",
+    "format-check": "prettier --list-different \"src/main/js/**/*.{js,ts,tsx,css}\"",
+    "lint": "eslint --ext js,ts,tsx --quiet src/main/js",
+    "lint-report": "eslint --ext js,ts,tsx -f json -o eslint-report.json src/main/js",
+    "ts-check": "tsc --noEmit",
+    "validate": "yarn lint && yarn ts-check && yarn format-check && yarn test",
+    "validate-ci": "yarn lint-report && yarn ts-check && yarn format-check && yarn test --coverage",
+    "precommit": "yarn ts-check && lint-staged"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "browserslist": [
+    "last 3 Chrome versions",
+    "last 3 Firefox versions",
+    "last 3 Safari versions",
+    "last 3 Edge versions",
+    "IE 11"
+  ],
+  "jest": {
+    "coverageDirectory": "<rootDir>/coverage",
+    "collectCoverageFrom": [
+      "src/main/js/**/*.{ts,tsx,js}"
+    ],
+    "coverageReporters": [
+      "lcovonly",
+      "text"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": {
+          "ignoreCodes": [
+            151001
+          ]
+        }
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(md|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/FileStub.js",
+      "^.+\\.css$": "<rootDir>/config/jest/CSSStub.js",
+      "^Docs/@types/types$": "<rootDir>/../sonar-docs/src/@types/types.d.ts",
+      "^Docs/(.*)": "<rootDir>/../sonar-docs/src/$1"
+    },
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/jest/SetupTestEnvironment.js",
+      "<rootDir>/config/jest/SetupEnzyme.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/config",
+      "<rootDir>/node_modules",
+      "<rootDir>/scripts"
+    ],
+    "testRegex": "(/__tests__/.*|\\-test)\\.(ts|tsx|js)$",
+    "transform": {
+      "\\.js$": "babel-jest",
+      "\\.(ts|tsx)$": "ts-jest"
+    }
+  },
+  "prettier": {
+    "jsxBracketSameLine": true,
+    "printWidth": 100,
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{css,json}": [
+        "prettier --write",
+        "git add"
+      ],
+      "*.{js,ts,tsx}": [
+        "eslint",
+        "jest --bail --passWithNoTests --findRelatedTests",
+        "prettier --write",
+        "git add"
+      ]
+    }
+  }
+}

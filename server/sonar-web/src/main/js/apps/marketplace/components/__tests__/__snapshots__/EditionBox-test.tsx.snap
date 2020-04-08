@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should display the edition 1`] = `
+<div
+  className="boxed-group boxed-group-inner marketplace-edition"
+>
+  <DocMarkdownBlock />
+  <div
+    className="marketplace-edition-action spacer-top"
+  >
+    <a
+      href="https://redirect.sonarsource.com/editions/developer.html?ncloc=1000&serverId=serverId&sourceEdition=community"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      marketplace.request_free_trial
+    </a>
+  </div>
+</div>
+`;

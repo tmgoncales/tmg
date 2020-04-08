@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<Fragment>
+  <Alert
+    className="js-component-analysis-warnings flex-1"
+    display="inline"
+    variant="warning"
+  >
+    <FormattedMessage
+      defaultMessage="component_navigation.last_analysis_had_warnings"
+      id="component_navigation.last_analysis_had_warnings"
+      values={
+        Object {
+          "warnings": <a
+            href="#"
+            onClick={[Function]}
+          >
+            <FormattedMessage
+              defaultMessage="component_navigation.x_warnings"
+              id="component_navigation.x_warnings"
+              values={
+                Object {
+                  "warningsCount": 1,
+                }
+              }
+            />
+          </a>,
+        }
+      }
+    />
+  </Alert>
+  <AnalysisWarningsModal
+    onClose={[Function]}
+    warnings={
+      Array [
+        "warning 1",
+      ]
+    }
+  />
+</Fragment>
+`;

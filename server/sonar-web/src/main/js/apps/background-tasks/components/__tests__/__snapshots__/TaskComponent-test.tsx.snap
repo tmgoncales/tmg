@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<td>
+  <span
+    className="little-spacer-right"
+  >
+    <QualifierIcon
+      qualifier="TRK"
+    />
+  </span>
+  <Connect(Organization)
+    organizationKey="org"
+  />
+  <Link
+    className="spacer-right"
+    onlyActiveOnIndex={false}
+    style={Object {}}
+    to={
+      Object {
+        "pathname": "/dashboard",
+        "query": Object {
+          "branch": undefined,
+          "id": "foo",
+        },
+      }
+    }
+  >
+    foo
+  </Link>
+  <TaskType
+    type="REPORT"
+  />
+</td>
+`;
+
+exports[`renders correctly 2`] = `
+<td>
+  <span
+    className="note"
+  >
+    bar
+  </span>
+  <TaskType
+    type="REPORT"
+  />
+</td>
+`;
+
+exports[`renders correctly for branches and pullrequest 1`] = `
+<td>
+  <BranchIcon
+    className="little-spacer-right"
+  />
+  <Connect(Organization)
+    organizationKey="org"
+  />
+  <Link
+    className="spacer-right"
+    onlyActiveOnIndex={false}
+    style={Object {}}
+    to={
+      Object {
+        "pathname": "/dashboard",
+        "query": Object {
+          "branch": "feature",
+          "id": "foo",
+        },
+      }
+    }
+  >
+    foo
+    <span
+      className="text-limited text-text-top"
+      title="feature"
+    >
+      <span
+        style={
+          Object {
+            "marginLeft": 5,
+            "marginRight": 5,
+          }
+        }
+      >
+        /
+      </span>
+      feature
+    </span>
+  </Link>
+  <TaskType
+    type="REPORT"
+  />
+</td>
+`;
+
+exports[`renders correctly for branches and pullrequest 2`] = `
+<td>
+  <BranchIcon
+    className="little-spacer-right"
+  />
+  <Connect(Organization)
+    organizationKey="org"
+  />
+  <Link
+    className="spacer-right"
+    onlyActiveOnIndex={false}
+    style={Object {}}
+    to={
+      Object {
+        "pathname": "/dashboard",
+        "query": Object {
+          "branch": "branch-6.7",
+          "id": "foo",
+        },
+      }
+    }
+  >
+    foo
+    <span
+      className="text-limited text-text-top"
+      title="branch-6.7"
+    >
+      <span
+        style={
+          Object {
+            "marginLeft": 5,
+            "marginRight": 5,
+          }
+        }
+      >
+        /
+      </span>
+      branch-6.7
+    </span>
+  </Link>
+  <TaskType
+    type="REPORT"
+  />
+</td>
+`;
+
+exports[`renders correctly for branches and pullrequest 3`] = `
+<td>
+  <PullRequestIcon
+    className="little-spacer-right"
+  />
+  <Connect(Organization)
+    organizationKey="org"
+  />
+  <Link
+    className="spacer-right"
+    onlyActiveOnIndex={false}
+    style={Object {}}
+    to={
+      Object {
+        "pathname": "/dashboard",
+        "query": Object {
+          "id": "foo",
+          "pullRequest": "pr-89",
+        },
+      }
+    }
+  >
+    foo
+    <span
+      className="text-limited text-text-top"
+    >
+      <span
+        style={
+          Object {
+            "marginLeft": 5,
+            "marginRight": 5,
+          }
+        }
+      >
+        /
+      </span>
+      pr-89
+    </span>
+  </Link>
+  <TaskType
+    type="REPORT"
+  />
+</td>
+`;

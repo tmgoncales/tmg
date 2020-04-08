@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<AlmTabRenderer
+  additionalColumnsHeaders={Array []}
+  additionalColumnsKeys={Array []}
+  alm="azure"
+  defaultBinding={
+    Object {
+      "key": "",
+      "personalAccessToken": "",
+    }
+  }
+  definitions={
+    Array [
+      Object {
+        "key": "key",
+        "personalAccessToken": "asdf1234",
+      },
+    ]
+  }
+  form={[MockFunction]}
+  loading={false}
+  multipleAlmEnabled={true}
+  onCancel={[Function]}
+  onCreate={[Function]}
+  onDelete={[MockFunction]}
+  onEdit={[Function]}
+  onSubmit={[Function]}
+  success={false}
+/>
+`;

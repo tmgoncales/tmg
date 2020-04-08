@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#renderDeactivateButton should render correctly 1`] = `
+<ConfirmButton
+  confirmButtonText="yes"
+  modalBody="coding_rules.deactivate.confirm"
+  modalHeader="coding_rules.deactivate"
+  onConfirm={[Function]}
+>
+  [Function]
+</ConfirmButton>
+`;
+
+exports[`#renderDeactivateButton should render correctly 2`] = `
+<Tooltip
+  overlay="coding_rules.need_extend_or_copy"
+>
+  <Button
+    className="coding-rules-detail-quality-profile-deactivate button-red disabled"
+  >
+    coding_rules.deactivate
+  </Button>
+</Tooltip>
+`;
+
+exports[`renderActions should disable the button when I am on a built-in profile 1`] = `
+<td
+  className="coding-rule-table-meta-cell coding-rule-activation-actions"
+>
+  <Tooltip
+    overlay="coding_rules.need_extend_or_copy"
+  >
+    <Button
+      className="coding-rules-detail-quality-profile-deactivate button-red disabled"
+    >
+      coding_rules.deactivate
+    </Button>
+  </Tooltip>
+</td>
+`;
+
+exports[`renderActions should render the activate button 1`] = `
+<td
+  className="coding-rule-table-meta-cell coding-rule-activation-actions"
+>
+  <ActivationButton
+    buttonText="coding_rules.activate"
+    className="coding-rules-detail-quality-profile-activate"
+    modalHeader="coding_rules.activate_in_quality_profile"
+    onDone={[Function]}
+    profiles={
+      Array [
+        Object {
+          "actions": Object {
+            "edit": true,
+          },
+          "activeDeprecatedRuleCount": 2,
+          "activeRuleCount": 10,
+          "childrenCount": 0,
+          "depth": 1,
+          "isBuiltIn": false,
+          "isDefault": false,
+          "isInherited": false,
+          "key": "key",
+          "language": "js",
+          "languageName": "JavaScript",
+          "name": "name",
+          "organization": "foo",
+          "projectCount": 3,
+        },
+      ]
+    }
+    rule={
+      Object {
+        "isTemplate": false,
+        "key": "javascript:S1067",
+        "lang": "js",
+        "langName": "JavaScript",
+        "name": "Use foo",
+        "severity": "MAJOR",
+        "status": "READY",
+        "sysTags": Array [
+          "a",
+          "b",
+        ],
+        "tags": Array [
+          "x",
+        ],
+        "type": "CODE_SMELL",
+      }
+    }
+  />
+</td>
+`;
+
+exports[`renderActions should render the deactivate button 1`] = `
+<td
+  className="coding-rule-table-meta-cell coding-rule-activation-actions"
+>
+  <ConfirmButton
+    confirmButtonText="yes"
+    modalBody="coding_rules.deactivate.confirm"
+    modalHeader="coding_rules.deactivate"
+    onConfirm={[Function]}
+  >
+    [Function]
+  </ConfirmButton>
+</td>
+`;
+
+exports[`should render correctly: default 1`] = `
+<div
+  className="coding-rule"
+  data-rule="javascript:S1067"
+>
+  <table
+    className="coding-rule-table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div
+            className="coding-rule-title"
+          >
+            <Link
+              className="link-no-underline"
+              onClick={[Function]}
+              onlyActiveOnIndex={false}
+              style={Object {}}
+              to={
+                Object {
+                  "pathname": "/coding_rules",
+                  "query": Object {
+                    "open": "javascript:S1067",
+                    "rule_key": "javascript:S1067",
+                  },
+                }
+              }
+            >
+              Use foo
+            </Link>
+          </div>
+        </td>
+        <td
+          className="coding-rule-table-meta-cell"
+        >
+          <div
+            className="display-flex-center coding-rule-meta"
+          >
+            <span
+              className="display-inline-flex-center spacer-left note"
+            >
+              JavaScript
+            </span>
+            <Tooltip
+              overlay="coding_rules.type.tooltip.CODE_SMELL"
+            >
+              <span
+                className="display-inline-flex-center spacer-left note"
+              >
+                <IssueTypeIcon
+                  query="CODE_SMELL"
+                />
+                <span
+                  className="little-spacer-left text-middle"
+                >
+                  issue.type.CODE_SMELL
+                </span>
+              </span>
+            </Tooltip>
+            <TagsList
+              allowUpdate={false}
+              className="display-inline-flex-center note spacer-left"
+              tags={
+                Array [
+                  "x",
+                  "a",
+                  "b",
+                ]
+              }
+            />
+            <SimilarRulesFilter
+              onFilterChange={[MockFunction]}
+              rule={
+                Object {
+                  "key": "javascript:S1067",
+                  "lang": "js",
+                  "langName": "JavaScript",
+                  "name": "Use foo",
+                  "severity": "MAJOR",
+                  "status": "READY",
+                  "sysTags": Array [
+                    "a",
+                    "b",
+                  ],
+                  "tags": Array [
+                    "x",
+                  ],
+                  "type": "CODE_SMELL",
+                }
+              }
+            />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`should render correctly: with activation 1`] = `
+<div
+  className="coding-rule"
+  data-rule="javascript:S1067"
+>
+  <table
+    className="coding-rule-table"
+  >
+    <tbody>
+      <tr>
+        <td>
+          <div
+            className="coding-rule-title"
+          >
+            <Link
+              className="link-no-underline"
+              onClick={[Function]}
+              onlyActiveOnIndex={false}
+              style={Object {}}
+              to={
+                Object {
+                  "pathname": "/coding_rules",
+                  "query": Object {
+                    "open": "javascript:S1067",
+                    "rule_key": "javascript:S1067",
+                  },
+                }
+              }
+            >
+              Use foo
+            </Link>
+          </div>
+        </td>
+        <td
+          className="coding-rule-table-meta-cell"
+        >
+          <div
+            className="display-flex-center coding-rule-meta"
+          >
+            <span
+              className="display-inline-flex-center spacer-left note"
+            >
+              JavaScript
+            </span>
+            <Tooltip
+              overlay="coding_rules.type.tooltip.CODE_SMELL"
+            >
+              <span
+                className="display-inline-flex-center spacer-left note"
+              >
+                <IssueTypeIcon
+                  query="CODE_SMELL"
+                />
+                <span
+                  className="little-spacer-left text-middle"
+                >
+                  issue.type.CODE_SMELL
+                </span>
+              </span>
+            </Tooltip>
+            <TagsList
+              allowUpdate={false}
+              className="display-inline-flex-center note spacer-left"
+              tags={
+                Array [
+                  "x",
+                  "a",
+                  "b",
+                ]
+              }
+            />
+            <SimilarRulesFilter
+              onFilterChange={[MockFunction]}
+              rule={
+                Object {
+                  "key": "javascript:S1067",
+                  "lang": "js",
+                  "langName": "JavaScript",
+                  "name": "Use foo",
+                  "severity": "MAJOR",
+                  "status": "READY",
+                  "sysTags": Array [
+                    "a",
+                    "b",
+                  ],
+                  "tags": Array [
+                    "x",
+                  ],
+                  "type": "CODE_SMELL",
+                }
+              }
+            />
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

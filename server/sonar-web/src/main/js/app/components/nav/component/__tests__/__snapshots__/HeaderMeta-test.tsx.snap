@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly for a branch 1`] = `
+<Fragment>
+  <div
+    className="display-flex-center flex-0 small"
+  >
+    <span
+      className="header-meta-warnings"
+    >
+      <ComponentNavWarnings
+        warnings={
+          Array [
+            "ERROR_1",
+            "ERROR_2",
+          ]
+        }
+      />
+    </span>
+    <span
+      className="spacer-left nowrap note"
+    >
+      <DateTimeFormatter
+        date="2017-01-02T00:00:00.000Z"
+      />
+    </span>
+    <span
+      className="spacer-left nowrap note"
+    >
+      version 0.0.1
+    </span>
+    <Connect(HomePageSelect)
+      className="spacer-left"
+      currentPage={
+        Object {
+          "branch": "branch-6.7",
+          "component": "my-project",
+          "type": "PROJECT",
+        }
+      }
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`should render correctly for a pull request 1`] = `
+<Fragment>
+  <div
+    className="display-flex-center flex-0 small"
+  >
+    <span
+      className="header-meta-warnings"
+    >
+      <ComponentNavWarnings
+        warnings={
+          Array [
+            "ERROR_1",
+            "ERROR_2",
+          ]
+        }
+      />
+    </span>
+    <span
+      className="spacer-left nowrap note"
+    >
+      <DateTimeFormatter
+        date="2017-01-02T00:00:00.000Z"
+      />
+    </span>
+  </div>
+  <div
+    className="navbar-context-meta-secondary display-inline-flex-center"
+  >
+    <a
+      className="display-inline-flex-center big-spacer-right"
+      href="https://example.com/pull/1234"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      branches.see_the_pr
+      <DetachIcon
+        className="little-spacer-left"
+        size={12}
+      />
+    </a>
+    <Connect(BranchStatus)
+      branchLike={
+        Object {
+          "analysisDate": "2018-01-01",
+          "base": "master",
+          "branch": "feature/foo/bar",
+          "key": "1001",
+          "target": "master",
+          "title": "Foo Bar feature",
+          "url": "https://example.com/pull/1234",
+        }
+      }
+      component="my-project"
+    />
+  </div>
+</Fragment>
+`;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<div
+  className="component-name text-ellipsis"
+>
+  <Connect(Organization)
+    link={false}
+    organizationKey="org"
+  />
+  <span
+    title="proj-name"
+  >
+    proj-name
+    <span
+      className="slash-separator"
+    />
+  </span>
+  comp-name
+</div>
+`;
+
+exports[`renders with sub-project 1`] = `
+<div
+  className="component-name text-ellipsis"
+>
+  <Connect(Organization)
+    link={false}
+    organizationKey="org"
+  />
+  <span
+    title="proj-name"
+  >
+    proj-name
+    <span
+      className="slash-separator"
+    />
+  </span>
+  <span
+    title="sub-proj-name"
+  >
+    sub-proj-name
+    <span
+      className="slash-separator"
+    />
+  </span>
+  comp-name
+</div>
+`;

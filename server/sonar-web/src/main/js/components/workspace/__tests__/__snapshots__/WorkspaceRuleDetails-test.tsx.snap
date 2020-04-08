@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<DeferredSpinner
+  loading={true}
+  timeout={100}
+/>
+`;
+
+exports[`should render 2`] = `
+<DeferredSpinner
+  loading={false}
+  timeout={100}
+>
+  <RuleDetailsMeta
+    canWrite={false}
+    hideSimilarRulesFilter={true}
+    onFilterChange={[Function]}
+    onTagsChange={[Function]}
+    referencedRepositories={
+      Object {
+        "repo": Object {
+          "key": "repo",
+          "language": "xoo",
+          "name": "Xoo Repository",
+        },
+      }
+    }
+    ruleDetails={
+      Object {
+        "key": "foo",
+        "name": "Foo",
+      }
+    }
+  />
+  <RuleDetailsDescription
+    canWrite={false}
+    onChange={[Function]}
+    ruleDetails={
+      Object {
+        "key": "foo",
+        "name": "Foo",
+      }
+    }
+  />
+</DeferredSpinner>
+`;

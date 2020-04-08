@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<div
+  className="workspace-viewer"
+>
+  <WorkspaceHeader
+    onClose={[Function]}
+    onCollapse={[MockFunction]}
+    onMaximize={[MockFunction]}
+    onMinimize={[MockFunction]}
+    onResize={[MockFunction]}
+  >
+    <WorkspaceRuleTitle
+      rule={
+        Object {
+          "key": "foo",
+          "name": "Foo",
+          "organization": "org",
+        }
+      }
+    />
+  </WorkspaceHeader>
+  <div
+    aria-busy={true}
+    aria-live="polite"
+    className="workspace-viewer-container"
+    style={
+      Object {
+        "height": 300,
+      }
+    }
+  >
+    <Connect(withAppState(WorkspaceRuleDetails))
+      onLoad={[Function]}
+      organizationKey="org"
+      ruleKey="foo"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should also render domains with an actions description matching the query 1`] = `
+<div
+  className="api-documentation-results panel"
+>
+  <div
+    className="list-group"
+  >
+    <Link
+      className="list-group-item"
+      key="bar"
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to={
+        Object {
+          "pathname": "/web_api/bar",
+          "query": Object {
+            "query": "Bar",
+          },
+        }
+      }
+    >
+      <h3
+        className="list-group-item-heading"
+      >
+        bar
+      </h3>
+    </Link>
+    <Link
+      className="list-group-item"
+      key="baz"
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to={
+        Object {
+          "pathname": "/web_api/baz",
+          "query": Object {
+            "query": "Bar",
+          },
+        }
+      }
+    >
+      <h3
+        className="list-group-item-heading"
+      >
+        baz
+      </h3>
+    </Link>
+  </div>
+</div>
+`;
+
+exports[`should not render deprecated domains 1`] = `
+<div
+  className="api-documentation-results panel"
+>
+  <div
+    className="list-group"
+  >
+    <Link
+      className="list-group-item"
+      key="foo"
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to={
+        Object {
+          "pathname": "/web_api/foo",
+          "query": Object {},
+        }
+      }
+    >
+      <h3
+        className="list-group-item-heading"
+      >
+        foo
+      </h3>
+    </Link>
+  </div>
+</div>
+`;
+
+exports[`should not render internal domains 1`] = `
+<div
+  className="api-documentation-results panel"
+>
+  <div
+    className="list-group"
+  >
+    <Link
+      className="list-group-item"
+      key="foo"
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to={
+        Object {
+          "pathname": "/web_api/foo",
+          "query": Object {},
+        }
+      }
+    >
+      <h3
+        className="list-group-item-heading"
+      >
+        foo
+      </h3>
+    </Link>
+  </div>
+</div>
+`;
+
+exports[`should render deprecated domains 1`] = `
+<div
+  className="api-documentation-results panel"
+>
+  <div
+    className="list-group"
+  >
+    <Link
+      className="list-group-item"
+      key="foo"
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to={
+        Object {
+          "pathname": "/web_api/foo",
+          "query": Object {
+            "deprecated": true,
+          },
+        }
+      }
+    >
+      <h3
+        className="list-group-item-heading"
+      >
+        foo
+      </h3>
+    </Link>
+    <Link
+      className="list-group-item"
+      key="bar"
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to={
+        Object {
+          "pathname": "/web_api/bar",
+          "query": Object {
+            "deprecated": true,
+          },
+        }
+      }
+    >
+      <h3
+        className="list-group-item-heading"
+      >
+        bar
+        <DeprecatedBadge
+          since="5.0"
+        />
+      </h3>
+    </Link>
+  </div>
+</div>
+`;
+
+exports[`should render internal domains 1`] = `
+<div
+  className="api-documentation-results panel"
+>
+  <div
+    className="list-group"
+  >
+    <Link
+      className="list-group-item"
+      key="foo"
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to={
+        Object {
+          "pathname": "/web_api/foo",
+          "query": Object {
+            "internal": true,
+          },
+        }
+      }
+    >
+      <h3
+        className="list-group-item-heading"
+      >
+        foo
+      </h3>
+    </Link>
+    <Link
+      className="list-group-item"
+      key="bar"
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to={
+        Object {
+          "pathname": "/web_api/bar",
+          "query": Object {
+            "internal": true,
+          },
+        }
+      }
+    >
+      <h3
+        className="list-group-item-heading"
+      >
+        bar
+        <InternalBadge />
+      </h3>
+    </Link>
+  </div>
+</div>
+`;
+
+exports[`should render only domains with an action matching the query 1`] = `
+<div
+  className="api-documentation-results panel"
+>
+  <div
+    className="list-group"
+  >
+    <Link
+      className="list-group-item"
+      key="foo"
+      onlyActiveOnIndex={false}
+      style={Object {}}
+      to={
+        Object {
+          "pathname": "/web_api/foo",
+          "query": Object {
+            "query": "Foo",
+          },
+        }
+      }
+    >
+      <h3
+        className="list-group-item-heading"
+      >
+        foo
+      </h3>
+    </Link>
+  </div>
+</div>
+`;

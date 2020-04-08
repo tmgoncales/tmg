@@ -1,0 +1,519 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generates token 1`] = `
+<div
+  className="boxed-group onboarding-step is-open"
+>
+  <div
+    className="onboarding-step-number"
+  >
+    1
+  </div>
+  <div
+    className="boxed-group-header"
+  >
+    <h2>
+      onboarding.token.header
+    </h2>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="boxed-group-inner"
+    >
+      <div>
+        <div>
+          <a
+            className="js-new link-base-color link-no-underline"
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              className="icon-radio spacer-right is-checked"
+            />
+            onboarding.token.generate_token
+          </a>
+          <div
+            className="big-spacer-top"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <input
+                autoFocus={true}
+                className="input-super-large spacer-right text-middle"
+                onChange={[Function]}
+                placeholder="onboarding.token.generate_token.placeholder"
+                required={true}
+                type="text"
+                value=""
+              />
+              <SubmitButton
+                className="text-middle"
+                disabled={true}
+              >
+                onboarding.token.generate
+              </SubmitButton>
+            </form>
+          </div>
+        </div>
+        <div
+          className="big-spacer-top"
+        >
+          <a
+            className="js-new link-base-color link-no-underline"
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              className="icon-radio spacer-right"
+            />
+            onboarding.token.use_existing_token
+          </a>
+        </div>
+      </div>
+      <div
+        className="note big-spacer-top width-50"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.token.text"
+          id="onboarding.token.text"
+          values={
+            Object {
+              "link": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/account/security"
+              >
+                onboarding.token.text.user_account
+              </Link>,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`generates token 2`] = `
+<div
+  className="boxed-group onboarding-step is-open"
+>
+  <div
+    className="onboarding-step-number"
+  >
+    1
+  </div>
+  <div
+    className="boxed-group-header"
+  >
+    <h2>
+      onboarding.token.header
+    </h2>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="boxed-group-inner"
+    >
+      <div>
+        <div>
+          <a
+            className="js-new link-base-color link-no-underline"
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              className="icon-radio spacer-right is-checked"
+            />
+            onboarding.token.generate_token
+          </a>
+          <div
+            className="big-spacer-top"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <input
+                autoFocus={true}
+                className="input-super-large spacer-right text-middle"
+                onChange={[Function]}
+                placeholder="onboarding.token.generate_token.placeholder"
+                required={true}
+                type="text"
+                value="my token"
+              />
+              <i
+                className="spinner text-middle"
+              />
+            </form>
+          </div>
+        </div>
+        <div
+          className="big-spacer-top"
+        >
+          <a
+            className="js-new link-base-color link-no-underline"
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              className="icon-radio spacer-right"
+            />
+            onboarding.token.use_existing_token
+          </a>
+        </div>
+      </div>
+      <div
+        className="note big-spacer-top width-50"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.token.text"
+          id="onboarding.token.text"
+          values={
+            Object {
+              "link": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/account/security"
+              >
+                onboarding.token.text.user_account
+              </Link>,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`generates token 3`] = `
+<div
+  className="boxed-group onboarding-step is-open"
+>
+  <div
+    className="onboarding-step-number"
+  >
+    1
+  </div>
+  <div
+    className="boxed-group-header"
+  >
+    <h2>
+      onboarding.token.header
+    </h2>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="boxed-group-inner"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <span
+          className="text-middle"
+        >
+          my token
+          : 
+        </span>
+        <strong
+          className="spacer-right text-middle"
+        >
+          abcd1234
+        </strong>
+        <DeleteButton
+          className="button-small text-middle"
+          onClick={[Function]}
+        />
+      </form>
+      <div
+        className="note big-spacer-top width-50"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.token.text"
+          id="onboarding.token.text"
+          values={
+            Object {
+              "link": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/account/security"
+              >
+                onboarding.token.text.user_account
+              </Link>,
+            }
+          }
+        />
+      </div>
+      <div
+        className="big-spacer-top"
+      >
+        <Button
+          className="js-continue"
+          onClick={[Function]}
+        >
+          continue
+        </Button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`revokes token 1`] = `
+<div
+  className="boxed-group onboarding-step is-open"
+>
+  <div
+    className="onboarding-step-number"
+  >
+    1
+  </div>
+  <div
+    className="boxed-group-header"
+  >
+    <h2>
+      onboarding.token.header
+    </h2>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="boxed-group-inner"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <span
+          className="text-middle"
+        >
+          my token
+          : 
+        </span>
+        <strong
+          className="spacer-right text-middle"
+        >
+          abcd1234
+        </strong>
+        <DeleteButton
+          className="button-small text-middle"
+          onClick={[Function]}
+        />
+      </form>
+      <div
+        className="note big-spacer-top width-50"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.token.text"
+          id="onboarding.token.text"
+          values={
+            Object {
+              "link": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/account/security"
+              >
+                onboarding.token.text.user_account
+              </Link>,
+            }
+          }
+        />
+      </div>
+      <div
+        className="big-spacer-top"
+      >
+        <Button
+          className="js-continue"
+          onClick={[Function]}
+        >
+          continue
+        </Button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`revokes token 2`] = `
+<div
+  className="boxed-group onboarding-step is-open"
+>
+  <div
+    className="onboarding-step-number"
+  >
+    1
+  </div>
+  <div
+    className="boxed-group-header"
+  >
+    <h2>
+      onboarding.token.header
+    </h2>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="boxed-group-inner"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <span
+          className="text-middle"
+        >
+          my token
+          : 
+        </span>
+        <strong
+          className="spacer-right text-middle"
+        >
+          abcd1234
+        </strong>
+        <i
+          className="spinner text-middle"
+        />
+      </form>
+      <div
+        className="note big-spacer-top width-50"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.token.text"
+          id="onboarding.token.text"
+          values={
+            Object {
+              "link": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/account/security"
+              >
+                onboarding.token.text.user_account
+              </Link>,
+            }
+          }
+        />
+      </div>
+      <div
+        className="big-spacer-top"
+      >
+        <Button
+          className="js-continue"
+          onClick={[Function]}
+        >
+          continue
+        </Button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`revokes token 3`] = `
+<div
+  className="boxed-group onboarding-step is-open"
+>
+  <div
+    className="onboarding-step-number"
+  >
+    1
+  </div>
+  <div
+    className="boxed-group-header"
+  >
+    <h2>
+      onboarding.token.header
+    </h2>
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="boxed-group-inner"
+    >
+      <div>
+        <div>
+          <a
+            className="js-new link-base-color link-no-underline"
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              className="icon-radio spacer-right is-checked"
+            />
+            onboarding.token.generate_token
+          </a>
+          <div
+            className="big-spacer-top"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <input
+                autoFocus={true}
+                className="input-super-large spacer-right text-middle"
+                onChange={[Function]}
+                placeholder="onboarding.token.generate_token.placeholder"
+                required={true}
+                type="text"
+                value=""
+              />
+              <SubmitButton
+                className="text-middle"
+                disabled={true}
+              >
+                onboarding.token.generate
+              </SubmitButton>
+            </form>
+          </div>
+        </div>
+        <div
+          className="big-spacer-top"
+        >
+          <a
+            className="js-new link-base-color link-no-underline"
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              className="icon-radio spacer-right"
+            />
+            onboarding.token.use_existing_token
+          </a>
+        </div>
+      </div>
+      <div
+        className="note big-spacer-top width-50"
+      >
+        <FormattedMessage
+          defaultMessage="onboarding.token.text"
+          id="onboarding.token.text"
+          values={
+            Object {
+              "link": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                target="_blank"
+                to="/account/security"
+              >
+                onboarding.token.text.user_account
+              </Link>,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

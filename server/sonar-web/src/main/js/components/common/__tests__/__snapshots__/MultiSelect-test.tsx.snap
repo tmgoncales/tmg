@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render multiselect with selected elements 1`] = `
+<div
+  className="multi-select"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      className="little-spacer-top"
+      loading={true}
+      onChange={[Function]}
+      placeholder=""
+      value=""
+    />
+  </div>
+  <ul
+    className="menu menu-vertically-limited spacer-top with-top-separator"
+  >
+    <MultiSelectOption
+      active={true}
+      element="bar"
+      key="bar"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+      selected={true}
+    />
+  </ul>
+</div>
+`;
+
+exports[`should render multiselect with selected elements 2`] = `
+<div
+  className="multi-select"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      className="little-spacer-top"
+      loading={true}
+      onChange={[Function]}
+      placeholder=""
+      value=""
+    />
+  </div>
+  <ul
+    className="menu menu-vertically-limited spacer-top with-top-separator"
+  >
+    <MultiSelectOption
+      active={true}
+      element="bar"
+      key="bar"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+      selected={true}
+    />
+    <MultiSelectOption
+      active={false}
+      disabled={false}
+      element={
+        Object {
+          "key": "foo",
+          "label": "foo",
+        }
+      }
+      key="[object Object]"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+    <MultiSelectOption
+      active={false}
+      disabled={false}
+      element={
+        Object {
+          "key": "bar",
+          "label": "bar",
+        }
+      }
+      key="[object Object]"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+    <MultiSelectOption
+      active={false}
+      disabled={false}
+      element={
+        Object {
+          "key": "baz",
+          "label": "baz",
+        }
+      }
+      key="[object Object]"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+  </ul>
+</div>
+`;
+
+exports[`should render multiselect with selected elements 3`] = `
+<div
+  className="multi-select"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      className="little-spacer-top"
+      loading={true}
+      onChange={[Function]}
+      placeholder=""
+      value=""
+    />
+  </div>
+  <ul
+    className="menu menu-vertically-limited spacer-top with-top-separator"
+  >
+    <MultiSelectOption
+      active={false}
+      element="bar"
+      key="bar"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+      selected={true}
+    />
+    <MultiSelectOption
+      active={false}
+      disabled={false}
+      element={
+        Object {
+          "key": "foo",
+          "label": "foo",
+        }
+      }
+      key="[object Object]"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+    <MultiSelectOption
+      active={true}
+      disabled={false}
+      element={
+        Object {
+          "key": "bar",
+          "label": "bar",
+        }
+      }
+      key="[object Object]"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+    <MultiSelectOption
+      active={false}
+      disabled={false}
+      element={
+        Object {
+          "key": "baz",
+          "label": "baz",
+        }
+      }
+      key="[object Object]"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+  </ul>
+</div>
+`;
+
+exports[`should render multiselect with selected elements 4`] = `
+<div
+  className="multi-select"
+>
+  <div
+    className="menu-search"
+  >
+    <SearchBox
+      autoFocus={true}
+      className="little-spacer-top"
+      loading={true}
+      onChange={[Function]}
+      placeholder=""
+      value="test"
+    />
+  </div>
+  <ul
+    className="menu menu-vertically-limited spacer-top with-top-separator"
+  >
+    <MultiSelectOption
+      active={false}
+      element="bar"
+      key="bar"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+      selected={true}
+    />
+    <MultiSelectOption
+      active={false}
+      disabled={false}
+      element={
+        Object {
+          "key": "foo",
+          "label": "foo",
+        }
+      }
+      key="[object Object]"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+    <MultiSelectOption
+      active={true}
+      disabled={false}
+      element={
+        Object {
+          "key": "bar",
+          "label": "bar",
+        }
+      }
+      key="[object Object]"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+    <MultiSelectOption
+      active={false}
+      disabled={false}
+      element={
+        Object {
+          "key": "baz",
+          "label": "baz",
+        }
+      }
+      key="[object Object]"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+    <MultiSelectOption
+      active={false}
+      custom={true}
+      element="test"
+      key="test"
+      onHover={[Function]}
+      onSelectChange={[Function]}
+      renderLabel={[Function]}
+    />
+  </ul>
+</div>
+`;

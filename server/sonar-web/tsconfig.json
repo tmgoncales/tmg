@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "strictFunctionTypes": false,
+    "target": "es2018",
+    "jsx": "react",
+    "lib": ["es2017", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "Docs/*": ["../sonar-docs/src/*"],
+      "*": ["./src/main/js/@types/*"]
+    }
+  },
+  "include": ["./src/main/js/**/*", "node_modules/sonar-ui-common/types.d.ts"]
+}

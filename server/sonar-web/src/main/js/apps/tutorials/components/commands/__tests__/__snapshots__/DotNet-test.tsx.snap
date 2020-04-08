@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DotNet renders correctly 1`] = `[Function]`;
+
+exports[`DotNet renders correctly 2`] = `
+<div>
+  <MSBuildScanner />
+  <h4
+    className="huge-spacer-top spacer-bottom"
+  >
+    onboarding.analysis.msbuild.execute
+  </h4>
+  <InstanceMessage
+    message="onboarding.analysis.msbuild.execute.text"
+  >
+    <Component />
+  </InstanceMessage>
+  <CodeSnippet
+    isOneLine={true}
+    snippet={
+      Array [
+        "SonarScanner.MSBuild.exe begin",
+        "/k:\\"projectKey\\"",
+        "/d:sonar.organization=\\"organization\\"",
+        "/d:sonar.host.url=\\"host\\"",
+        "/d:sonar.login=\\"token\\"",
+      ]
+    }
+  />
+  <CodeSnippet
+    isOneLine={false}
+    snippet="MsBuild.exe /t:Rebuild"
+  />
+  <CodeSnippet
+    isOneLine={true}
+    snippet={
+      Array [
+        "SonarScanner.MSBuild.exe end",
+        "/d:sonar.login=\\"token\\"",
+      ]
+    }
+  />
+  <p
+    className="big-spacer-top markdown"
+  >
+    <FormattedMessage
+      defaultMessage="onboarding.analysis.docs"
+      id="onboarding.analysis.docs"
+      values={
+        Object {
+          "link": <a
+            href="http://redirect.sonarsource.com/doc/install-configure-scanner-msbuild.html"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            onboarding.analysis.msbuild.docs_link
+          </a>,
+        }
+      }
+    />
+  </p>
+</div>
+`;

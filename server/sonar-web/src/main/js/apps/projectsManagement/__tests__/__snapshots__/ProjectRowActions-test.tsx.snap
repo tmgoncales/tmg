@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`permissions shows the apply permission template modal 1`] = `
+<ApplyTemplate
+  onClose={[Function]}
+  organization="org"
+  project={
+    Object {
+      "id": "foo",
+      "key": "foo",
+      "name": "Foo",
+      "organization": "bar",
+      "qualifier": "TRK",
+      "visibility": "private",
+    }
+  }
+/>
+`;
+
+exports[`renders correctly 1`] = `
+<Fragment>
+  <ActionsDropdown
+    onOpen={[Function]}
+  >
+    <ActionsDropdownItem
+      className="js-apply-template"
+      onClick={[Function]}
+    >
+      projects_role.apply_template
+    </ActionsDropdownItem>
+  </ActionsDropdown>
+</Fragment>
+`;
+
+exports[`restore access shows the restore access modal 1`] = `
+<RestoreAccessModal
+  currentUser={
+    Object {
+      "groups": Array [],
+      "isLoggedIn": true,
+      "login": "luke",
+      "name": "Skywalker",
+      "scmAccounts": Array [],
+    }
+  }
+  onClose={[Function]}
+  onRestoreAccess={[Function]}
+  project={
+    Object {
+      "id": "foo",
+      "key": "foo",
+      "name": "Foo",
+      "organization": "bar",
+      "qualifier": "TRK",
+      "visibility": "private",
+    }
+  }
+/>
+`;

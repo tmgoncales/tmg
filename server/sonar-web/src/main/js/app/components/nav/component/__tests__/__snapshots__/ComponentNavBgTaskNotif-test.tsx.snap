@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders background task error correctly 1`] = `
+<Alert
+  display="banner"
+  variant="error"
+>
+  <FormattedMessage
+    defaultMessage="component_navigation.status.failed_X"
+    id="component_navigation.status.failed_X"
+    values={
+      Object {
+        "branch": undefined,
+        "type": "background_task.type.",
+        "url": undefined,
+      }
+    }
+  />
+</Alert>
+`;
+
+exports[`renders background task error correctly for a different branch/PR 1`] = `
+<Alert
+  display="banner"
+  variant="error"
+>
+  <FormattedMessage
+    defaultMessage="component_navigation.status.failed_branch_X"
+    id="component_navigation.status.failed_branch_X"
+    values={
+      Object {
+        "branch": "my/branch",
+        "type": "background_task.type.",
+        "url": undefined,
+      }
+    }
+  />
+</Alert>
+`;
+
+exports[`renders background task error correctly for a different branch/PR 2`] = `
+<Alert
+  display="banner"
+  variant="error"
+>
+  <FormattedMessage
+    defaultMessage="component_navigation.status.failed_branch_X"
+    id="component_navigation.status.failed_branch_X"
+    values={
+      Object {
+        "branch": "650 - feature/my_pr",
+        "type": "background_task.type.",
+        "url": undefined,
+      }
+    }
+  />
+</Alert>
+`;
+
+exports[`renders background task in progress info correctly 1`] = `
+<Alert
+  display="banner"
+  variant="info"
+>
+  <FormattedMessage
+    defaultMessage="component_navigation.status.in_progress_X"
+    id="component_navigation.status.in_progress_X"
+    values={
+      Object {
+        "branch": undefined,
+        "type": "background_task.type.",
+        "url": undefined,
+      }
+    }
+  />
+</Alert>
+`;
+
+exports[`renders background task license info correctly 1`] = `
+<Connect(withAppState(ComponentNavLicenseNotif))
+  currentTask={
+    Object {
+      "errorMessage": "Foo",
+      "errorType": "LICENSING",
+      "status": "FAILED",
+    }
+  }
+/>
+`;
+
+exports[`renders background task pending info correctly 1`] = `
+<Alert
+  display="banner"
+  variant="info"
+>
+  <FormattedMessage
+    defaultMessage="component_navigation.status.pending_X"
+    id="component_navigation.status.pending_X"
+    values={
+      Object {
+        "branch": undefined,
+        "type": "background_task.type.",
+        "url": undefined,
+      }
+    }
+  />
+</Alert>
+`;
+
+exports[`renders background task pending info correctly for admin 1`] = `
+<Alert
+  display="banner"
+  variant="info"
+>
+  <FormattedMessage
+    defaultMessage="component_navigation.status.pending_X.admin"
+    id="component_navigation.status.pending_X.admin"
+    values={
+      Object {
+        "branch": undefined,
+        "type": "background_task.type.",
+        "url": <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to={
+            Object {
+              "pathname": "/project/background_tasks",
+              "query": Object {
+                "id": "foo",
+                "status": "__ALL__",
+              },
+            }
+          }
+        >
+          background_tasks.page
+        </Link>,
+      }
+    }
+  />
+</Alert>
+`;

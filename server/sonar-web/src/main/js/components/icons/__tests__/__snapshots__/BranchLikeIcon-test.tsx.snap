@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render branch icon correctly 1`] = `<BranchIcon />`;
+
+exports[`should render pull request icon correctly 1`] = `<PullRequestIcon />`;

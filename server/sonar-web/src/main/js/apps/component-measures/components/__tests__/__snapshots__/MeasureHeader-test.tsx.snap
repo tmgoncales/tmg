@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<div
+  className="measure-details-header big-spacer-bottom"
+>
+  <div
+    className="measure-details-primary"
+  >
+    <div
+      className="measure-details-metric"
+    >
+      <IssueTypeIcon
+        className="little-spacer-right text-text-bottom"
+        query="reliability_rating"
+      />
+      Reliability Rating
+      <span
+        className="measure-details-value spacer-left"
+      >
+        <strong>
+          <Measure
+            metricKey="reliability_rating"
+            metricType="RATING"
+            value="3.0"
+          />
+        </strong>
+      </span>
+      <Tooltip
+        overlay="component_measures.show_metric_history"
+      >
+        <Link
+          className="js-show-history spacer-left button button-small"
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to={
+            Object {
+              "pathname": "/project/activity",
+              "query": Object {
+                "custom_metrics": "reliability_rating",
+                "graph": "custom",
+                "id": "foo",
+              },
+            }
+          }
+        >
+          <HistoryIcon />
+        </Link>
+      </Tooltip>
+    </div>
+    <div
+      className="measure-details-primary-actions"
+    >
+      <InjectIntl(LeakPeriodLegend)
+        className="spacer-left"
+        component={
+          Object {
+            "key": "foo",
+            "name": "Foo",
+            "qualifier": "TRK",
+          }
+        }
+        period={
+          Object {
+            "date": "2017-05-16T13:50:02+0200",
+            "index": 1,
+            "mode": "previous_version",
+            "parameter": "6,4",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render correctly for leak 1`] = `
+<div
+  className="measure-details-header big-spacer-bottom"
+>
+  <div
+    className="measure-details-primary"
+  >
+    <div
+      className="measure-details-metric"
+    >
+      <IssueTypeIcon
+        className="little-spacer-right text-text-bottom"
+        query="new_reliability_rating"
+      />
+      Reliability Rating on New Code
+      <span
+        className="measure-details-value spacer-left"
+      >
+        <strong>
+          <Measure
+            className="leak-box"
+            metricKey="new_reliability_rating"
+            metricType="RATING"
+            value="3.0"
+          />
+        </strong>
+      </span>
+    </div>
+    <div
+      className="measure-details-primary-actions"
+    >
+      <InjectIntl(LeakPeriodLegend)
+        className="spacer-left"
+        component={
+          Object {
+            "key": "foo",
+            "name": "Foo",
+            "qualifier": "TRK",
+          }
+        }
+        period={
+          Object {
+            "date": "2017-05-16T13:50:02+0200",
+            "index": 1,
+            "mode": "previous_version",
+            "parameter": "6,4",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render with a branch 1`] = `
+<div
+  className="measure-details-header big-spacer-bottom"
+>
+  <div
+    className="measure-details-primary"
+  >
+    <div
+      className="measure-details-metric"
+    >
+      <IssueTypeIcon
+        className="little-spacer-right text-text-bottom"
+        query="new_reliability_rating"
+      />
+      Reliability Rating on New Code
+      <span
+        className="measure-details-value spacer-left"
+      >
+        <strong>
+          <Measure
+            className="leak-box"
+            metricKey="new_reliability_rating"
+            metricType="RATING"
+            value="3.0"
+          />
+        </strong>
+      </span>
+    </div>
+    <div
+      className="measure-details-primary-actions"
+    >
+      <InjectIntl(LeakPeriodLegend)
+        className="spacer-left"
+        component={
+          Object {
+            "key": "foo",
+            "name": "Foo",
+            "qualifier": "TRK",
+          }
+        }
+        period={
+          Object {
+            "date": "2017-05-16T13:50:02+0200",
+            "index": 1,
+            "mode": "previous_version",
+            "parameter": "6,4",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should work with measure without value 1`] = `
+<div
+  className="measure-details-header big-spacer-bottom"
+>
+  <div
+    className="measure-details-primary"
+  >
+    <div
+      className="measure-details-metric"
+    >
+      <IssueTypeIcon
+        className="little-spacer-right text-text-bottom"
+        query="reliability_rating"
+      />
+      Reliability Rating
+      <span
+        className="measure-details-value spacer-left"
+      >
+        <strong>
+          <Measure
+            metricKey="reliability_rating"
+            metricType="RATING"
+          />
+        </strong>
+      </span>
+      <Tooltip
+        overlay="component_measures.show_metric_history"
+      >
+        <Link
+          className="js-show-history spacer-left button button-small"
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to={
+            Object {
+              "pathname": "/project/activity",
+              "query": Object {
+                "custom_metrics": "reliability_rating",
+                "graph": "custom",
+                "id": "foo",
+              },
+            }
+          }
+        >
+          <HistoryIcon />
+        </Link>
+      </Tooltip>
+    </div>
+    <div
+      className="measure-details-primary-actions"
+    >
+      <InjectIntl(LeakPeriodLegend)
+        className="spacer-left"
+        component={
+          Object {
+            "key": "foo",
+            "name": "Foo",
+            "qualifier": "TRK",
+          }
+        }
+        period={
+          Object {
+            "date": "2017-05-16T13:50:02+0200",
+            "index": 1,
+            "mode": "previous_version",
+            "parameter": "6,4",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;

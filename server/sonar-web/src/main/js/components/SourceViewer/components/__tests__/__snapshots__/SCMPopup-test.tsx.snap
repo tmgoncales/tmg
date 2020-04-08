@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<DropdownOverlay
+  placement="right-top"
+>
+  <div
+    className="source-viewer-bubble-popup abs-width-400"
+  >
+    <div>
+      foo
+    </div>
+    <div
+      className="spacer-top"
+    >
+      <DateFormatter
+        date="2017-01-01"
+      />
+    </div>
+  </div>
+</DropdownOverlay>
+`;

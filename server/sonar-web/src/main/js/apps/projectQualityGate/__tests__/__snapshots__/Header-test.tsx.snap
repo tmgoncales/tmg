@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<header
+  className="page-header"
+>
+  <div
+    className="page-title display-flex-center"
+  >
+    <h1>
+      project_quality_gate.page
+    </h1>
+    <DocTooltip
+      className="spacer-left"
+      doc={Promise {}}
+    />
+  </div>
+  <div
+    className="page-description"
+  >
+    project_quality_gate.page.description
+  </div>
+</header>
+`;

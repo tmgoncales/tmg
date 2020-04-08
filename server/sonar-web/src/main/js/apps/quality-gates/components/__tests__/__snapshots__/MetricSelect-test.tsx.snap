@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<Select
+  className="text-middle quality-gate-metric-select"
+  id="condition-metric"
+  onChange={[Function]}
+  options={
+    Array [
+      Object {
+        "domain": undefined,
+        "label": "Coverage",
+        "value": "coverage",
+      },
+    ]
+  }
+  placeholder="search.search_for_metrics"
+/>
+`;

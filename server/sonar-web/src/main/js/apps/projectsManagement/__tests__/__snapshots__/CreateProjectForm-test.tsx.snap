@@ -1,0 +1,417 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates project 1`] = `
+<Modal
+  contentLabel="modal form"
+  onRequestClose={[MockFunction]}
+>
+  <form
+    id="create-project-form"
+    onSubmit={[Function]}
+  >
+    <header
+      className="modal-head"
+    >
+      <h2>
+        qualifiers.create.TRK
+      </h2>
+    </header>
+    <div
+      className="modal-body"
+    >
+      <div
+        className="modal-field"
+      >
+        <label
+          htmlFor="create-project-name"
+        >
+          name
+          <em
+            className="mandatory"
+          >
+            *
+          </em>
+        </label>
+        <input
+          autoFocus={true}
+          id="create-project-name"
+          maxLength={2000}
+          name="name"
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="modal-field"
+      >
+        <label
+          htmlFor="create-project-key"
+        >
+          key
+          <em
+            className="mandatory"
+          >
+            *
+          </em>
+        </label>
+        <input
+          id="create-project-key"
+          maxLength={400}
+          name="key"
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="modal-field"
+      >
+        <label>
+          visibility
+        </label>
+        <VisibilitySelector
+          className="little-spacer-top"
+          onChange={[Function]}
+          visibility="public"
+        />
+      </div>
+      <div
+        className="spacer-top"
+      >
+        <UpgradeOrganizationBox
+          className="width-100"
+          insideModal={true}
+          onOrganizationUpgrade={[MockFunction]}
+          organization={
+            Object {
+              "actions": Object {
+                "admin": true,
+              },
+              "key": "org",
+              "name": "org",
+              "projectVisibility": "public",
+            }
+          }
+        />
+      </div>
+    </div>
+    <footer
+      className="modal-foot"
+    >
+      <SubmitButton
+        disabled={false}
+        id="create-project-submit"
+      >
+        create
+      </SubmitButton>
+      <ResetButtonLink
+        id="create-project-cancel"
+        onClick={[MockFunction]}
+      >
+        cancel
+      </ResetButtonLink>
+    </footer>
+  </form>
+</Modal>
+`;
+
+exports[`creates project 2`] = `
+<Modal
+  contentLabel="modal form"
+  onRequestClose={[MockFunction]}
+>
+  <form
+    id="create-project-form"
+    onSubmit={[Function]}
+  >
+    <header
+      className="modal-head"
+    >
+      <h2>
+        qualifiers.create.TRK
+      </h2>
+    </header>
+    <div
+      className="modal-body"
+    >
+      <div
+        className="modal-field"
+      >
+        <label
+          htmlFor="create-project-name"
+        >
+          name
+          <em
+            className="mandatory"
+          >
+            *
+          </em>
+        </label>
+        <input
+          autoFocus={true}
+          id="create-project-name"
+          maxLength={2000}
+          name="name"
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value="name"
+        />
+      </div>
+      <div
+        className="modal-field"
+      >
+        <label
+          htmlFor="create-project-key"
+        >
+          key
+          <em
+            className="mandatory"
+          >
+            *
+          </em>
+        </label>
+        <input
+          id="create-project-key"
+          maxLength={400}
+          name="key"
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value="key"
+        />
+      </div>
+      <div
+        className="modal-field"
+      >
+        <label>
+          visibility
+        </label>
+        <VisibilitySelector
+          className="little-spacer-top"
+          onChange={[Function]}
+          visibility="private"
+        />
+      </div>
+      <div
+        className="spacer-top"
+      >
+        <UpgradeOrganizationBox
+          className="width-100"
+          insideModal={true}
+          onOrganizationUpgrade={[MockFunction]}
+          organization={
+            Object {
+              "actions": Object {
+                "admin": true,
+              },
+              "key": "org",
+              "name": "org",
+              "projectVisibility": "public",
+            }
+          }
+        />
+      </div>
+    </div>
+    <footer
+      className="modal-foot"
+    >
+      <SubmitButton
+        disabled={false}
+        id="create-project-submit"
+      >
+        create
+      </SubmitButton>
+      <ResetButtonLink
+        id="create-project-cancel"
+        onClick={[MockFunction]}
+      >
+        cancel
+      </ResetButtonLink>
+    </footer>
+  </form>
+</Modal>
+`;
+
+exports[`creates project 3`] = `
+<Modal
+  contentLabel="modal form"
+  onRequestClose={[MockFunction]}
+>
+  <form
+    id="create-project-form"
+    onSubmit={[Function]}
+  >
+    <header
+      className="modal-head"
+    >
+      <h2>
+        qualifiers.create.TRK
+      </h2>
+    </header>
+    <div
+      className="modal-body"
+    >
+      <div
+        className="modal-field"
+      >
+        <label
+          htmlFor="create-project-name"
+        >
+          name
+          <em
+            className="mandatory"
+          >
+            *
+          </em>
+        </label>
+        <input
+          autoFocus={true}
+          id="create-project-name"
+          maxLength={2000}
+          name="name"
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value="name"
+        />
+      </div>
+      <div
+        className="modal-field"
+      >
+        <label
+          htmlFor="create-project-key"
+        >
+          key
+          <em
+            className="mandatory"
+          >
+            *
+          </em>
+        </label>
+        <input
+          id="create-project-key"
+          maxLength={400}
+          name="key"
+          onChange={[Function]}
+          required={true}
+          type="text"
+          value="key"
+        />
+      </div>
+      <div
+        className="modal-field"
+      >
+        <label>
+          visibility
+        </label>
+        <VisibilitySelector
+          className="little-spacer-top"
+          onChange={[Function]}
+          visibility="private"
+        />
+      </div>
+      <div
+        className="spacer-top"
+      >
+        <UpgradeOrganizationBox
+          className="width-100"
+          insideModal={true}
+          onOrganizationUpgrade={[MockFunction]}
+          organization={
+            Object {
+              "actions": Object {
+                "admin": true,
+              },
+              "key": "org",
+              "name": "org",
+              "projectVisibility": "public",
+            }
+          }
+        />
+      </div>
+    </div>
+    <footer
+      className="modal-foot"
+    >
+      <i
+        className="spinner spacer-right"
+      />
+      <SubmitButton
+        disabled={true}
+        id="create-project-submit"
+      >
+        create
+      </SubmitButton>
+      <ResetButtonLink
+        id="create-project-cancel"
+        onClick={[MockFunction]}
+      >
+        cancel
+      </ResetButtonLink>
+    </footer>
+  </form>
+</Modal>
+`;
+
+exports[`creates project 4`] = `
+<Modal
+  contentLabel="modal form"
+  onRequestClose={[MockFunction]}
+>
+  <div>
+    <header
+      className="modal-head"
+    >
+      <h2>
+        qualifiers.create.TRK
+      </h2>
+    </header>
+    <div
+      className="modal-body"
+    >
+      <Alert
+        variant="success"
+      >
+        <FormattedMessage
+          defaultMessage="projects_management.project_has_been_successfully_created"
+          id="projects_management.project_has_been_successfully_created"
+          values={
+            Object {
+              "project": <Link
+                onlyActiveOnIndex={false}
+                style={Object {}}
+                to={
+                  Object {
+                    "pathname": "/dashboard",
+                    "query": Object {
+                      "branch": undefined,
+                      "id": "name",
+                    },
+                  }
+                }
+              >
+                name
+              </Link>,
+            }
+          }
+        />
+      </Alert>
+    </div>
+    <footer
+      className="modal-foot"
+    >
+      <ResetButtonLink
+        id="create-project-close"
+        innerRef={[Function]}
+        onClick={[MockFunction]}
+      >
+        close
+      </ResetButtonLink>
+    </footer>
+  </div>
+</Modal>
+`;

@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<tr>
+  <TaskStatus
+    status="PENDING"
+  />
+  <TaskComponent
+    task={
+      Object {
+        "componentName": "foo",
+        "id": "123",
+        "organization": "org",
+        "status": "PENDING",
+        "submittedAt": "2017-01-01",
+        "submitterLogin": "yoda",
+        "type": "REPORT",
+      }
+    }
+  />
+  <TaskId
+    id="123"
+  />
+  <TaskSubmitter
+    submitter="yoda"
+  />
+  <TaskDay
+    submittedAt="2017-01-01"
+  />
+  <TaskDate
+    date="2017-01-01"
+  />
+  <TaskDate
+    baseDate="2017-01-01"
+  />
+  <TaskDate
+    baseDate="2017-01-01"
+  />
+  <TaskExecutionTime />
+  <TaskActions
+    onCancelTask={[MockFunction]}
+    onFilterTask={[MockFunction]}
+    task={
+      Object {
+        "componentName": "foo",
+        "id": "123",
+        "organization": "org",
+        "status": "PENDING",
+        "submittedAt": "2017-01-01",
+        "submitterLogin": "yoda",
+        "type": "REPORT",
+      }
+    }
+  />
+</tr>
+`;

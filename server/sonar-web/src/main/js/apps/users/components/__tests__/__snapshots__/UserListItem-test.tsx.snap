@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<tr>
+  <td
+    className="thin nowrap text-middle"
+  >
+    <Connect(Avatar)
+      name="One"
+      size={36}
+    />
+  </td>
+  <UserListItemIdentity
+    user={
+      Object {
+        "active": true,
+        "lastConnectionDate": "2019-01-18T15:06:33+0100",
+        "local": false,
+        "login": "obi",
+        "name": "One",
+        "scmAccounts": Array [],
+      }
+    }
+  />
+  <td
+    className="thin nowrap text-middle"
+  >
+    <UserScmAccounts
+      scmAccounts={Array []}
+    />
+  </td>
+  <td
+    className="thin nowrap text-middle"
+  >
+    <DateFromNowHourPrecision
+      date="2019-01-18T15:06:33+0100"
+    />
+  </td>
+  <td
+    className="thin nowrap text-middle"
+  >
+    <UserGroups
+      groups={Array []}
+      onUpdateUsers={[MockFunction]}
+      user={
+        Object {
+          "active": true,
+          "lastConnectionDate": "2019-01-18T15:06:33+0100",
+          "local": false,
+          "login": "obi",
+          "name": "One",
+          "scmAccounts": Array [],
+        }
+      }
+    />
+  </td>
+  <td
+    className="thin nowrap text-middle"
+  >
+    <ButtonIcon
+      className="js-user-tokens spacer-left button-small"
+      onClick={[Function]}
+      tooltip="users.update_tokens"
+    >
+      <BulletListIcon />
+    </ButtonIcon>
+  </td>
+  <td
+    className="thin nowrap text-right text-middle"
+  >
+    <UserActions
+      isCurrentUser={false}
+      onUpdateUsers={[MockFunction]}
+      user={
+        Object {
+          "active": true,
+          "lastConnectionDate": "2019-01-18T15:06:33+0100",
+          "local": false,
+          "login": "obi",
+          "name": "One",
+          "scmAccounts": Array [],
+        }
+      }
+    />
+  </td>
+</tr>
+`;
+
+exports[`should render correctly without last connection date 1`] = `
+<tr>
+  <td
+    className="thin nowrap text-middle"
+  >
+    <Connect(Avatar)
+      name="One"
+      size={36}
+    />
+  </td>
+  <UserListItemIdentity
+    user={
+      Object {
+        "active": true,
+        "lastConnectionDate": "2019-01-18T15:06:33+0100",
+        "local": false,
+        "login": "obi",
+        "name": "One",
+        "scmAccounts": Array [],
+      }
+    }
+  />
+  <td
+    className="thin nowrap text-middle"
+  >
+    <UserScmAccounts
+      scmAccounts={Array []}
+    />
+  </td>
+  <td
+    className="thin nowrap text-middle"
+  >
+    <DateFromNowHourPrecision
+      date="2019-01-18T15:06:33+0100"
+    />
+  </td>
+  <td
+    className="thin nowrap text-middle"
+  >
+    <UserGroups
+      groups={Array []}
+      onUpdateUsers={[MockFunction]}
+      user={
+        Object {
+          "active": true,
+          "lastConnectionDate": "2019-01-18T15:06:33+0100",
+          "local": false,
+          "login": "obi",
+          "name": "One",
+          "scmAccounts": Array [],
+        }
+      }
+    />
+  </td>
+  <td
+    className="thin nowrap text-middle"
+  >
+    <ButtonIcon
+      className="js-user-tokens spacer-left button-small"
+      onClick={[Function]}
+      tooltip="users.update_tokens"
+    >
+      <BulletListIcon />
+    </ButtonIcon>
+  </td>
+  <td
+    className="thin nowrap text-right text-middle"
+  >
+    <UserActions
+      isCurrentUser={false}
+      onUpdateUsers={[MockFunction]}
+      user={
+        Object {
+          "active": true,
+          "lastConnectionDate": "2019-01-18T15:06:33+0100",
+          "local": false,
+          "login": "obi",
+          "name": "One",
+          "scmAccounts": Array [],
+        }
+      }
+    />
+  </td>
+</tr>
+`;

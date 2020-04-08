@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a sticky TOC if available 1`] = `
+<div
+  className="markdown has-toc"
+>
+  <div
+    className="markdown-content"
+  >
+    <div>
+      <Block
+        key="h-1"
+      >
+        <h2
+          key="h-2"
+        >
+          Lorem ipsum
+        </h2>
+        
+
+        <p
+          key="h-3"
+        >
+          Quisque vitae tincidunt felis. Nam blandit risus placerat, efficitur enim ut, pellentesque sem. Mauris non lorem auctor, consequat neque eget, dignissim augue.
+        </p>
+        
+
+        <h2
+          key="h-4"
+        >
+          Sit amet
+        </h2>
+        
+
+        <h3
+          key="h-5"
+        >
+          Maecenas diam
+        </h3>
+        
+
+        <p
+          key="h-6"
+        >
+          Velit, vestibulum nec ultrices id, mollis eget arcu. Sed dapibus, sapien ut auctor consectetur, mi tortor vestibulum ante, eget dapibus lacus risus.
+        </p>
+        
+
+        <h3
+          key="h-7"
+        >
+          Integer
+        </h3>
+        
+
+        <p
+          key="h-8"
+        >
+          At cursus turpis. Aenean at elit fringilla, porttitor mi eget, dapibus nisi. Donec quis congue odio.
+        </p>
+        
+
+        <h2
+          key="h-9"
+        >
+          Nam blandit
+        </h2>
+        
+
+        <p
+          key="h-10"
+        >
+          Risus placerat, efficitur enim ut, pellentesque sem. Mauris non lorem auctor, consequat neque eget, dignissim augue.
+        </p>
+      </Block>
+    </div>
+  </div>
+  <DocToc
+    content="
+## Lorem ipsum
+
+Quisque vitae tincidunt felis. Nam blandit risus placerat, efficitur enim ut, pellentesque sem. Mauris non lorem auctor, consequat neque eget, dignissim augue.
+
+## Sit amet
+
+### Maecenas diam
+
+Velit, vestibulum nec ultrices id, mollis eget arcu. Sed dapibus, sapien ut auctor consectetur, mi tortor vestibulum ante, eget dapibus lacus risus.
+
+### Integer
+
+At cursus turpis. Aenean at elit fringilla, porttitor mi eget, dapibus nisi. Donec quis congue odio.
+
+## Nam blandit 
+
+Risus placerat, efficitur enim ut, pellentesque sem. Mauris non lorem auctor, consequat neque eget, dignissim augue.
+"
+    onAnchorClick={[Function]}
+  />
+</div>
+`;
+
+exports[`should render simple markdown 1`] = `
+<div
+  className="markdown"
+>
+  <div
+    className="markdown-content"
+  >
+    <div>
+      <p
+        key="h-1"
+      >
+        this is 
+        <em
+          key="h-2"
+        >
+          bold
+        </em>
+         text
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`should render with custom props for links 1`] = `
+<withChildProps
+  href="#quality-profiles"
+  key="h-2"
+>
+  link
+</withChildProps>
+`;
+
+exports[`should use custom component for links 1`] = `
+<withChildProps
+  href="/quality-profiles"
+  key="h-2"
+>
+  link
+</withChildProps>
+`;

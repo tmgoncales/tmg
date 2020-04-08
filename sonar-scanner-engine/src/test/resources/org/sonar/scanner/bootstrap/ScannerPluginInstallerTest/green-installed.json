@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    {
+      "key": "java",
+      "hash": "def",
+      "updatedAt": 200
+    },
+    {
+      "key": "cobol",
+      "hash": "ghi",
+      "updatedAt": 300
+    }
+  ]
+}

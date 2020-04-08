@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should support more than two nodes 1`] = `
+<Fragment>
+  <HealthCard
+    biggerHealth={true}
+    health="RED"
+    healthCauses={
+      Array [
+        "Database down",
+      ]
+    }
+    name="System"
+    onClick={[Function]}
+    open={true}
+    sysInfoData={
+      Object {
+        "Compute Engine Tasks": Object {
+          "Total In Progress": 0,
+          "Total Pending": 0,
+        },
+        "Database": Object {
+          "Database": "PostgreSQL",
+          "Database Version": "10.3",
+          "Driver": "PostgreSQL JDBC Driver",
+          "Driver Version": "42.2.5",
+          "URL": "jdbc:postgresql://localhost/sonar",
+          "Username": "sonar",
+        },
+        "High Availability": true,
+        "Lines of Code": "989,880",
+        "Search Indexes": Object {
+          "Index components - Docs": 30445,
+          "Index components - Shards": 10,
+        },
+        "Search State": Object {
+          "Nodes": 3,
+          "State": "GREEN",
+        },
+      }
+    }
+  />
+  <li
+    className="note system-info-health-title"
+  >
+    system.application_nodes_title
+  </li>
+  <HealthCard
+    health="GREEN"
+    healthCauses={Array []}
+    key="Bar"
+    name="Bar"
+    onClick={[Function]}
+    open={false}
+    sysInfoData={
+      Object {
+        "Compute Engine Logging": Object {
+          "Logs Level": "INFO",
+        },
+        "Web Logging": Object {
+          "Logs Level": "INFO",
+        },
+      }
+    }
+  />
+  <li
+    className="note system-info-health-title"
+  >
+    system.search_nodes_title
+  </li>
+  <HealthCard
+    key="Baz"
+    name="Baz"
+    onClick={[Function]}
+    open={false}
+    sysInfoData={
+      Object {
+        "Compute Engine Logging": Object {
+          "Logs Level": "INFO",
+        },
+        "Web Logging": Object {
+          "Logs Level": "INFO",
+        },
+      }
+    }
+  />
+</Fragment>
+`;

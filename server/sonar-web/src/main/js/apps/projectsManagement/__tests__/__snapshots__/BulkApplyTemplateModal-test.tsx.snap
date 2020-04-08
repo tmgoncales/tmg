@@ -1,0 +1,419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bulk applies template to all results 1`] = `
+<Modal
+  contentLabel="permission_templates.bulk_apply_permission_template"
+  onRequestClose={[MockFunction]}
+  size="small"
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      permission_templates.bulk_apply_permission_template
+    </h2>
+  </header>
+  <div
+    className="modal-body"
+  >
+    <i
+      className="spinner"
+    />
+  </div>
+  <footer
+    className="modal-foot"
+  >
+    <ResetButtonLink
+      onClick={[MockFunction]}
+    >
+      cancel
+    </ResetButtonLink>
+  </footer>
+</Modal>
+`;
+
+exports[`bulk applies template to all results 2`] = `
+<Modal
+  contentLabel="permission_templates.bulk_apply_permission_template"
+  onRequestClose={[MockFunction]}
+  size="small"
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      permission_templates.bulk_apply_permission_template
+    </h2>
+  </header>
+  <div
+    className="modal-body"
+  >
+    <Alert
+      variant="warning"
+    >
+      permission_templates.bulk_apply_permission_template.apply_to_all.17
+    </Alert>
+    <div
+      className="modal-field"
+    >
+      <label>
+        template
+        <em
+          className="mandatory"
+        >
+          *
+        </em>
+      </label>
+      <Select
+        clearable={false}
+        disabled={false}
+        onChange={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "Foo",
+              "value": "foo",
+            },
+            Object {
+              "label": "Bar",
+              "value": "bar",
+            },
+          ]
+        }
+        value="foo"
+      />
+    </div>
+  </div>
+  <footer
+    className="modal-foot"
+  >
+    <SubmitButton
+      disabled={false}
+      onClick={[Function]}
+    >
+      apply
+    </SubmitButton>
+    <ResetButtonLink
+      onClick={[MockFunction]}
+    >
+      cancel
+    </ResetButtonLink>
+  </footer>
+</Modal>
+`;
+
+exports[`bulk applies template to all results 3`] = `
+<Modal
+  contentLabel="permission_templates.bulk_apply_permission_template"
+  onRequestClose={[MockFunction]}
+  size="small"
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      permission_templates.bulk_apply_permission_template
+    </h2>
+  </header>
+  <div
+    className="modal-body"
+  >
+    <Alert
+      variant="warning"
+    >
+      permission_templates.bulk_apply_permission_template.apply_to_all.17
+    </Alert>
+    <div
+      className="modal-field"
+    >
+      <label>
+        template
+        <em
+          className="mandatory"
+        >
+          *
+        </em>
+      </label>
+      <Select
+        clearable={false}
+        disabled={true}
+        onChange={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "Foo",
+              "value": "foo",
+            },
+            Object {
+              "label": "Bar",
+              "value": "bar",
+            },
+          ]
+        }
+        value="foo"
+      />
+    </div>
+  </div>
+  <footer
+    className="modal-foot"
+  >
+    <i
+      className="spinner spacer-right"
+    />
+    <SubmitButton
+      disabled={true}
+      onClick={[Function]}
+    >
+      apply
+    </SubmitButton>
+    <ResetButtonLink
+      onClick={[MockFunction]}
+    >
+      cancel
+    </ResetButtonLink>
+  </footer>
+</Modal>
+`;
+
+exports[`bulk applies template to all results 4`] = `
+<Modal
+  contentLabel="permission_templates.bulk_apply_permission_template"
+  onRequestClose={[MockFunction]}
+  size="small"
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      permission_templates.bulk_apply_permission_template
+    </h2>
+  </header>
+  <div
+    className="modal-body"
+  >
+    <Alert
+      variant="success"
+    >
+      projects_role.apply_template.success
+    </Alert>
+  </div>
+  <footer
+    className="modal-foot"
+  >
+    <ResetButtonLink
+      onClick={[MockFunction]}
+    >
+      close
+    </ResetButtonLink>
+  </footer>
+</Modal>
+`;
+
+exports[`bulk applies template to selected results 1`] = `
+<Modal
+  contentLabel="permission_templates.bulk_apply_permission_template"
+  onRequestClose={[MockFunction]}
+  size="small"
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      permission_templates.bulk_apply_permission_template
+    </h2>
+  </header>
+  <div
+    className="modal-body"
+  >
+    <i
+      className="spinner"
+    />
+  </div>
+  <footer
+    className="modal-foot"
+  >
+    <ResetButtonLink
+      onClick={[MockFunction]}
+    >
+      cancel
+    </ResetButtonLink>
+  </footer>
+</Modal>
+`;
+
+exports[`bulk applies template to selected results 2`] = `
+<Modal
+  contentLabel="permission_templates.bulk_apply_permission_template"
+  onRequestClose={[MockFunction]}
+  size="small"
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      permission_templates.bulk_apply_permission_template
+    </h2>
+  </header>
+  <div
+    className="modal-body"
+  >
+    <Alert
+      variant="warning"
+    >
+      permission_templates.bulk_apply_permission_template.apply_to_selected.2
+    </Alert>
+    <div
+      className="modal-field"
+    >
+      <label>
+        template
+        <em
+          className="mandatory"
+        >
+          *
+        </em>
+      </label>
+      <Select
+        clearable={false}
+        disabled={false}
+        onChange={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "Foo",
+              "value": "foo",
+            },
+            Object {
+              "label": "Bar",
+              "value": "bar",
+            },
+          ]
+        }
+        value="foo"
+      />
+    </div>
+  </div>
+  <footer
+    className="modal-foot"
+  >
+    <SubmitButton
+      disabled={false}
+      onClick={[Function]}
+    >
+      apply
+    </SubmitButton>
+    <ResetButtonLink
+      onClick={[MockFunction]}
+    >
+      cancel
+    </ResetButtonLink>
+  </footer>
+</Modal>
+`;
+
+exports[`bulk applies template to selected results 3`] = `
+<Modal
+  contentLabel="permission_templates.bulk_apply_permission_template"
+  onRequestClose={[MockFunction]}
+  size="small"
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      permission_templates.bulk_apply_permission_template
+    </h2>
+  </header>
+  <div
+    className="modal-body"
+  >
+    <Alert
+      variant="warning"
+    >
+      permission_templates.bulk_apply_permission_template.apply_to_selected.2
+    </Alert>
+    <div
+      className="modal-field"
+    >
+      <label>
+        template
+        <em
+          className="mandatory"
+        >
+          *
+        </em>
+      </label>
+      <Select
+        clearable={false}
+        disabled={true}
+        onChange={[Function]}
+        options={
+          Array [
+            Object {
+              "label": "Foo",
+              "value": "foo",
+            },
+            Object {
+              "label": "Bar",
+              "value": "bar",
+            },
+          ]
+        }
+        value="foo"
+      />
+    </div>
+  </div>
+  <footer
+    className="modal-foot"
+  >
+    <i
+      className="spinner spacer-right"
+    />
+    <SubmitButton
+      disabled={true}
+      onClick={[Function]}
+    >
+      apply
+    </SubmitButton>
+    <ResetButtonLink
+      onClick={[MockFunction]}
+    >
+      cancel
+    </ResetButtonLink>
+  </footer>
+</Modal>
+`;
+
+exports[`bulk applies template to selected results 4`] = `
+<Modal
+  contentLabel="permission_templates.bulk_apply_permission_template"
+  onRequestClose={[MockFunction]}
+  size="small"
+>
+  <header
+    className="modal-head"
+  >
+    <h2>
+      permission_templates.bulk_apply_permission_template
+    </h2>
+  </header>
+  <div
+    className="modal-body"
+  >
+    <Alert
+      variant="success"
+    >
+      projects_role.apply_template.success
+    </Alert>
+  </div>
+  <footer
+    className="modal-foot"
+  >
+    <ResetButtonLink
+      onClick={[MockFunction]}
+    >
+      close
+    </ResetButtonLink>
+  </footer>
+</Modal>
+`;

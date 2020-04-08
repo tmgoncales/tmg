@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<Connect(withCurrentUser(HotspotViewerRenderer))
+  commentTextRef={
+    Object {
+      "current": null,
+    }
+  }
+  commentVisible={false}
+  component={
+    Object {
+      "breadcrumbs": Array [],
+      "key": "my-project",
+      "name": "MyProject",
+      "organization": "foo",
+      "qualifier": "TRK",
+      "qualityGate": Object {
+        "isDefault": true,
+        "key": "30",
+        "name": "Sonar way",
+      },
+      "qualityProfiles": Array [
+        Object {
+          "deleted": false,
+          "key": "my-qp",
+          "language": "ts",
+          "name": "Sonar way",
+        },
+      ],
+      "tags": Array [],
+    }
+  }
+  loading={true}
+  onCloseComment={[Function]}
+  onOpenComment={[Function]}
+  onUpdateHotspot={[Function]}
+  parentScrollRef={
+    Object {
+      "current": null,
+    }
+  }
+  securityCategories={
+    Object {
+      "cat1": Object {
+        "title": "cat1",
+      },
+    }
+  }
+/>
+`;
+
+exports[`should render correctly 2`] = `
+<Connect(withCurrentUser(HotspotViewerRenderer))
+  commentTextRef={
+    Object {
+      "current": null,
+    }
+  }
+  commentVisible={false}
+  component={
+    Object {
+      "breadcrumbs": Array [],
+      "key": "my-project",
+      "name": "MyProject",
+      "organization": "foo",
+      "qualifier": "TRK",
+      "qualityGate": Object {
+        "isDefault": true,
+        "key": "30",
+        "name": "Sonar way",
+      },
+      "qualityProfiles": Array [
+        Object {
+          "deleted": false,
+          "key": "my-qp",
+          "language": "ts",
+          "name": "Sonar way",
+        },
+      ],
+      "tags": Array [],
+    }
+  }
+  hotspot={
+    Object {
+      "id": "I am a detailled hotspot",
+    }
+  }
+  loading={false}
+  onCloseComment={[Function]}
+  onOpenComment={[Function]}
+  onUpdateHotspot={[Function]}
+  parentScrollRef={
+    Object {
+      "current": null,
+    }
+  }
+  securityCategories={
+    Object {
+      "cat1": Object {
+        "title": "cat1",
+      },
+    }
+  }
+/>
+`;

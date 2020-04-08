@@ -1,0 +1,290 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`bulk applies permission template 1`] = `
+<BulkApplyTemplateModal
+  onClose={[Function]}
+  organization="org"
+  provisioned={false}
+  qualifier="TRK"
+  query=""
+  selection={Array []}
+  total={17}
+/>
+`;
+
+exports[`deletes projects 1`] = `
+<DeleteModal
+  onClose={[Function]}
+  onConfirm={[Function]}
+  organization="org"
+  provisioned={false}
+  qualifier="TRK"
+  query=""
+  selection={
+    Array [
+      "foo",
+      "bar",
+    ]
+  }
+  total={17}
+/>
+`;
+
+exports[`render qualifiers filter 1`] = `
+<div
+  className="big-spacer-bottom"
+>
+  <table
+    className="data"
+  >
+    <tbody>
+      <tr>
+        <td
+          className="thin text-middle"
+        >
+          <Checkbox
+            checked={false}
+            id="projects-selection"
+            onCheck={[Function]}
+            thirdState={false}
+          />
+        </td>
+        <td
+          className="thin nowrap text-middle"
+        >
+          <Select
+            className="input-medium"
+            clearable={false}
+            disabled={false}
+            name="projects-qualifier"
+            onChange={[Function]}
+            optionRenderer={[Function]}
+            options={
+              Array [
+                Object {
+                  "label": "qualifiers.TRK",
+                  "value": "TRK",
+                },
+                Object {
+                  "label": "qualifiers.VW",
+                  "value": "VW",
+                },
+                Object {
+                  "label": "qualifiers.APP",
+                  "value": "APP",
+                },
+              ]
+            }
+            searchable={false}
+            value="TRK"
+            valueRenderer={[Function]}
+          />
+        </td>
+        <td
+          className="thin nowrap text-middle"
+        >
+          <DateInput
+            inputClassName="input-medium"
+            name="analyzed-before"
+            onChange={[MockFunction]}
+            placeholder="last_analysis_before"
+          />
+        </td>
+        <td
+          className="thin nowrap text-middle"
+        >
+          <Select
+            className="input-small"
+            clearable={false}
+            disabled={false}
+            name="projects-visibility"
+            onChange={[Function]}
+            options={
+              Array [
+                Object {
+                  "label": "visibility.both",
+                  "value": "all",
+                },
+                Object {
+                  "label": "visibility.public",
+                  "value": "public",
+                },
+                Object {
+                  "label": "visibility.private",
+                  "value": "private",
+                },
+              ]
+            }
+            searchable={false}
+            value="all"
+          />
+        </td>
+        <td
+          className="thin nowrap text-middle"
+        >
+          <Checkbox
+            checked={false}
+            className="link-checkbox-control"
+            id="projects-provisioned"
+            onCheck={[MockFunction]}
+            thirdState={false}
+          >
+            <span
+              className="text-middle little-spacer-left"
+            >
+              provisioning.only_provisioned
+            </span>
+          </Checkbox>
+          <HelpTooltip
+            className="spacer-left"
+            overlay="provisioning.only_provisioned.tooltip"
+          />
+        </td>
+        <td
+          className="text-middle"
+        >
+          <SearchBox
+            minLength={3}
+            onChange={[MockFunction]}
+            placeholder="search.search_by_name_or_key"
+            value=""
+          />
+        </td>
+        <td
+          className="thin nowrap text-middle"
+        >
+          <Button
+            className="js-bulk-apply-permission-template"
+            disabled={true}
+            onClick={[Function]}
+          >
+            permission_templates.bulk_apply_permission_template
+          </Button>
+          <Button
+            className="js-delete spacer-left button-red"
+            disabled={true}
+            onClick={[Function]}
+            title="permission_templates.select_to_delete"
+          >
+            delete
+          </Button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`renders 1`] = `
+<div
+  className="big-spacer-bottom"
+>
+  <table
+    className="data"
+  >
+    <tbody>
+      <tr>
+        <td
+          className="thin text-middle"
+        >
+          <Checkbox
+            checked={false}
+            id="projects-selection"
+            onCheck={[Function]}
+            thirdState={false}
+          />
+        </td>
+        <td
+          className="thin nowrap text-middle"
+        >
+          <DateInput
+            inputClassName="input-medium"
+            name="analyzed-before"
+            onChange={[MockFunction]}
+            placeholder="last_analysis_before"
+          />
+        </td>
+        <td
+          className="thin nowrap text-middle"
+        >
+          <Select
+            className="input-small"
+            clearable={false}
+            disabled={false}
+            name="projects-visibility"
+            onChange={[Function]}
+            options={
+              Array [
+                Object {
+                  "label": "visibility.both",
+                  "value": "all",
+                },
+                Object {
+                  "label": "visibility.public",
+                  "value": "public",
+                },
+                Object {
+                  "label": "visibility.private",
+                  "value": "private",
+                },
+              ]
+            }
+            searchable={false}
+            value="all"
+          />
+        </td>
+        <td
+          className="thin nowrap text-middle"
+        >
+          <Checkbox
+            checked={false}
+            className="link-checkbox-control"
+            id="projects-provisioned"
+            onCheck={[MockFunction]}
+            thirdState={false}
+          >
+            <span
+              className="text-middle little-spacer-left"
+            >
+              provisioning.only_provisioned
+            </span>
+          </Checkbox>
+          <HelpTooltip
+            className="spacer-left"
+            overlay="provisioning.only_provisioned.tooltip"
+          />
+        </td>
+        <td
+          className="text-middle"
+        >
+          <SearchBox
+            minLength={3}
+            onChange={[MockFunction]}
+            placeholder="search.search_by_name_or_key"
+            value=""
+          />
+        </td>
+        <td
+          className="thin nowrap text-middle"
+        >
+          <Button
+            className="js-bulk-apply-permission-template"
+            disabled={true}
+            onClick={[Function]}
+          >
+            permission_templates.bulk_apply_permission_template
+          </Button>
+          <Button
+            className="js-delete spacer-left button-red"
+            disabled={true}
+            onClick={[Function]}
+            title="permission_templates.select_to_delete"
+          >
+            delete
+          </Button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

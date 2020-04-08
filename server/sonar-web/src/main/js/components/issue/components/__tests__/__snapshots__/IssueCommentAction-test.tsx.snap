@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should open the popup when the button is clicked 1`] = `
+<li
+  className="issue-meta dropdown"
+>
+  <Toggler
+    closeOnClickOutside={false}
+    onRequestClose={[Function]}
+    open={true}
+    overlay={
+      <CommentPopup
+        onComment={[Function]}
+        placeholder=""
+        toggleComment={
+          [MockFunction] {
+            "calls": Array [
+              Array [],
+            ],
+            "results": Array [
+              Object {
+                "type": "return",
+                "value": undefined,
+              },
+            ],
+          }
+        }
+      />
+    }
+  >
+    <ButtonLink
+      className="issue-action js-issue-comment"
+      onClick={[Function]}
+    >
+      <span
+        className="issue-meta-label"
+      >
+        issue.comment.formlink
+      </span>
+    </ButtonLink>
+  </Toggler>
+</li>
+`;
+
+exports[`should render correctly 1`] = `
+<li
+  className="issue-meta dropdown"
+>
+  <Toggler
+    closeOnClickOutside={false}
+    onRequestClose={[Function]}
+    open={false}
+    overlay={
+      <CommentPopup
+        onComment={[Function]}
+        placeholder=""
+        toggleComment={[MockFunction]}
+      />
+    }
+  >
+    <ButtonLink
+      className="issue-action js-issue-comment"
+      onClick={[Function]}
+    >
+      <span
+        className="issue-meta-label"
+      >
+        issue.comment.formlink
+      </span>
+    </ButtonLink>
+  </Toggler>
+</li>
+`;

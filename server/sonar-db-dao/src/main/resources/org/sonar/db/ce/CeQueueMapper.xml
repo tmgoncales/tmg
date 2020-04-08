@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd">
+
+<mapper namespace="org.sonar.db.ce.CeQueueMapper">
+
+  <sql id="columns">
+    cq.uuid,
+    cq.task_type as taskType,
+    cq.component_uuid as componentUuid,
+    cq.main_component_uuid as mainComponentUuid,
+    cq.status as status,
+    cq.submitter_uuid as submitterUuid,
+    cq.worker_uuid as workerUuid,
+    cq.started_at as startedAt,
+    cq.created_at as createdAt,
+    cq.updated_at as updatedAt
+  </sql>
+
+  <sql id="orderByDateAndId">
+    order by
+      cq.created_at asc,
+      cq.id asc
+  </sql>
+
+  <sql id="orderByDescDateAndId">
+    order by
+      cq.created_at desc,
+      cq.id desc
+  </sql>
+
+  <select id="selectByUuid" parameterType="String" resultType="org.sonar.db.ce.CeQueueDto">
+    select
+      <include refid="columns"/>
+    from
+      ce_queue cq
+    where
+      cq.uuid=#{uuid,jdbcType=VARCHAR}
+  </select>
+
+  <select id="countByStatusAndMainComponentUuid" parameterType="map" resultType="int">
+    select
+      count(1)
+    from
+      ce_queue
+    where
+      status=#{status,jdbcType=VARCHAR}
+      <if test="mainComponentUuid!=null">
+        and main_component_uuid=#{mainComponentUuid,jdbcType=VARCHAR}
+      </if>
+  </select>
+
+  <select id="selectCreationDateOfOldestPendingByMainComponentUuid" parameterType="map" resultType="Long">
+    select
+      min(created_at)
+    from
+      ce_queue
+    where
+      status='PENDING'
+      <if test="mainComponentUuid!=null">
+        and main_component_uuid=#{mainComponentUuid,jdbcType=VARCHAR}
+      </if>
+  </select>
+
+  <select id="countByStatusAndMainComponentUuids" resultType="org.sonar.db.ce.QueueCount">
+    select
+      main_component_uuid as mainComponentUuid,
+      count(1) as total
+    from
+      ce_queue
+    where
+      status=#{status,jdbcType=VARCHAR}
+      and main_component_uuid in
+      <foreach collection="mainComponentUuids" open="(" close=")" item="mainComponentUuid" separator=",">
+        #{mainComponentUuid,jdbcType=VARCHAR}
+      </foreach>
+    group by main_component_uuid
+  </select>
+
+  <select id="countAll" resultType="int">
+    select
+      count(1)
+    from
+      ce_queue
+  </select>
+
+  <select id="selectByMainComponentUuid" parameterType="String" resultType="org.sonar.db.ce.CeQueueDto">
+    select
+      <include refid="columns"/>
+    from
+      ce_queue cq
+    where
+      cq.main_component_uuid=#{mainComponentUuid,jdbcType=VARCHAR}
+    <include refid="orderByDateAndId"/>
+  </select>
+
+  <select id="selectAllInAscOrder" resultType="org.sonar.db.ce.CeQueueDto">
+    select
+      <include refid="columns"/>
+    from
+      ce_queue cq
+    <include refid="orderByDateAndId"/>
+  </select>
+
+  <select id="selectByQueryInDescOrder" resultType="org.sonar.db.ce.CeQueueDto">
+    select
+    <include refid="columns"/>
+    <include refid="sqlSelectByQuery"/>
+    <include refid="orderByDescDateAndId"/>
+  </select>
+
+  <select id="countByQuery" resultType="int">
+    select
+      count(1)
+    <include refid="sqlSelectByQuery"/>
+  </select>
+
+  <sql id="sqlSelectByQuery">
+    from
+      ce_queue cq
+    <where>
+      <if test="query.mainComponentUuids != null and query.mainComponentUuids.size()>0">
+        and cq.main_component_uuid in
+        <foreach collection="query.mainComponentUuids" open="(" close=")" item="mainComponentUuid" separator=",">
+          #{mainComponentUuid,jdbcType=VARCHAR}
+        </foreach>
+      </if>
+      <if test="query.statuses != null">
+        and cq.status in
+        <foreach collection="query.statuses" open="(" close=")" item="status" separator=",">
+          #{status,jdbcType=VARCHAR}
+        </foreach>
+      </if>
+      <if test="query.type != null">
+        and cq.task_type=#{query.type,jdbcType=VARCHAR}
+      </if>
+      <if test="query.minSubmittedAt != null">
+        and cq.created_at &gt;= #{query.minSubmittedAt,jdbcType=BIGINT}
+      </if>
+    </where>
+  </sql>
+
+  <select id="selectEligibleForPeek" resultType="String">
+    select cq.uuid
+    <include refid="sqlSelectEligibleForPeek"/>
+    <include refid="orderBySelectEligibleForPeek"/>
+    limit #{pagination.pageSize,jdbcType=INTEGER} offset #{pagination.offset,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectEligibleForPeek" parameterType="map" resultType="String" databaseId="mssql">
+    select query.uuid from (
+      select
+        row_number() over(<include refid="orderBySelectEligibleForPeek"/>) as number,
+        <include refid="columnsSelectEligibleForPeek"/>
+      <include refid="sqlSelectEligibleForPeek"/>
+    ) as query
+    where
+    query.number between #{pagination.startRowNumber,jdbcType=INTEGER} and #{pagination.endRowNumber,jdbcType=INTEGER}
+    <include refid="orderBySelectEligibleForPeek"/>
+  </select>
+
+  <select id="selectEligibleForPeek" parameterType="map" resultType="String" databaseId="oracle">
+    select taskuuid from (
+      select rownum as rn, t."uuid" as taskuuid from (
+        select
+          <include refid="columnsSelectEligibleForPeek"/>
+          <include refid="sqlSelectEligibleForPeek" />
+          <include refid="orderBySelectEligibleForPeek"/>
+      ) t
+    ) t
+    where
+      t.rn between #{pagination.startRowNumber,jdbcType=INTEGER} and #{pagination.endRowNumber,jdbcType=INTEGER}
+  </select>
+
+  <sql id="columnsSelectEligibleForPeek">
+    cq.uuid as "uuid",
+    cq.created_at as "created_at",
+    cq.id as "id"
+  </sql>
+
+  <sql id="sqlSelectEligibleForPeek">
+    from
+      ce_queue cq
+    where
+      cq.status='PENDING'
+      and cq.started_at is null
+      and not exists (
+        select
+          1
+        from
+          ce_queue cq2
+        where
+          cq.main_component_uuid=cq2.main_component_uuid
+          and cq2.status &lt;&gt; 'PENDING'
+      )
+  </sql>
+
+  <sql id="orderBySelectEligibleForPeek">
+    order by
+      created_at asc,
+      id asc
+  </sql>
+
+  <select id="selectPending" resultType="org.sonar.db.ce.CeQueueDto">
+    select
+      <include refid="columns"/>
+    from
+      ce_queue cq
+    where
+      cq.status = 'PENDING'
+  </select>
+
+  <select id="selectWornout" resultType="org.sonar.db.ce.CeQueueDto">
+    select
+      <include refid="columns"/>
+    from
+      ce_queue cq
+    where
+      cq.status = 'PENDING'
+      and cq.started_at is not null
+  </select>
+
+  <select id="selectInProgressStartedBefore" resultType="org.sonar.db.ce.CeQueueDto">
+    select
+    <include refid="columns"/>
+    from
+    ce_queue cq
+    where
+    cq.status = 'IN_PROGRESS'
+    and cq.started_at is not null
+    and cq.started_at &lt; #{date,jdbcType=BIGINT}
+  </select>
+
+  <insert id="insert" parameterType="org.sonar.db.ce.CeQueueDto" useGeneratedKeys="false">
+    insert into ce_queue
+    (
+      uuid,
+      task_type,
+      component_uuid,
+      main_component_uuid,
+      status,
+      submitter_uuid,
+      worker_uuid,
+      execution_count,
+      created_at,
+      updated_at,
+      started_at
+    )
+    values (
+      #{uuid,jdbcType=VARCHAR},
+      #{taskType,jdbcType=VARCHAR},
+      #{componentUuid,jdbcType=VARCHAR},
+      #{mainComponentUuid,jdbcType=VARCHAR},
+      #{status,jdbcType=VARCHAR},
+      #{submitterUuid,jdbcType=VARCHAR},
+      #{workerUuid,jdbcType=VARCHAR},
+      0,
+      #{createdAt,jdbcType=BIGINT},
+      #{updatedAt,jdbcType=BIGINT},
+      #{startedAt,jdbcType=BIGINT}
+    )
+  </insert>
+
+  <update id="resetToPendingForWorker">
+    update ce_queue set
+      status='PENDING',
+      updated_at=#{updatedAt,jdbcType=BIGINT}
+    where
+      status &lt;&gt; 'PENDING'
+      and worker_uuid = #{workerUuid,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateIf" parameterType="map">
+    update ce_queue set
+      status=#{new.status,jdbcType=VARCHAR},
+      worker_uuid=#{new.workerUuid,jdbcType=VARCHAR},
+      started_at=#{new.startedAt,jdbcType=BIGINT},
+      updated_at=#{new.updatedAt,jdbcType=BIGINT}
+    where
+      uuid=#{uuid,jdbcType=VARCHAR}
+      and status=#{old.status,jdbcType=VARCHAR}
+  </update>
+
+  <delete id="deleteByUuid">
+    delete from
+      ce_queue
+    where
+      uuid=#{uuid,jdbcType=VARCHAR}
+      <if test="deleteIf != null">
+        and status = #{deleteIf.expectedStatus,jdbcType=VARCHAR}
+      </if>
+  </delete>
+
+  <update id="resetTasksWithUnknownWorkerUUIDs">
+    update ce_queue set
+      status='PENDING',
+      worker_uuid=NULL,
+      updated_at=#{updatedAt,jdbcType=BIGINT}
+    where
+      status = 'IN_PROGRESS'
+    and (
+      worker_uuid is NULL
+      or worker_uuid not in
+      <foreach collection="knownWorkerUUIDs" open="(" close=")" item="workerUUID" separator=",">
+        #{workerUUID,jdbcType=VARCHAR}
+      </foreach>
+    )
+  </update>
+
+  <update id="resetAllInProgressTasks">
+    update ce_queue set
+      status='PENDING',
+      worker_uuid=NULL,
+      updated_at=#{updatedAt,jdbcType=BIGINT}
+    where
+      status = 'IN_PROGRESS'
+  </update>
+</mapper>

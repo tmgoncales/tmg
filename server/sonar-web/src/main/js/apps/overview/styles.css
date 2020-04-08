@@ -1,0 +1,312 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2020 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.overview {
+  animation: fadeIn 0.5s forwards;
+}
+
+.overview-panel {
+  min-height: 100%;
+}
+
+.overview-panel-content {
+  background: white;
+  border: 1px solid var(--barBorderColor);
+}
+
+.overview-panel-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: var(--smallFontSize);
+  margin-bottom: var(--gridSize);
+}
+
+.overview-panel-padded {
+  padding: calc(2 * var(--gridSize));
+}
+
+.overview-panel-big-padded {
+  padding: calc(3 * var(--gridSize));
+}
+
+.overview-panel-huge-padded {
+  padding: calc(5 * var(--gridSize));
+}
+
+/*
+ * Measures
+ */
+
+.overview-measures-row {
+  min-height: 105px;
+  box-sizing: border-box;
+}
+
+.overview-measures-row + .overview-measures-row {
+  border-top: 1px solid var(--barBorderColor);
+}
+
+.overview-measures-value {
+  line-height: 1;
+  font-size: var(--giganticFontSize);
+  white-space: nowrap;
+}
+
+.overview-measures-empty-value {
+  height: 1px;
+  width: var(--bigFontSize);
+  background: var(--baseFontColor);
+}
+
+.overview-measures-aside {
+  flex-basis: 200px;
+  box-sizing: border-box;
+}
+
+.overview-measures-tab {
+  width: calc(160px - calc(4 * var(--gridSize)));
+}
+
+.overview-measures-emphasis {
+  background: var(--veryLightGreen);
+}
+
+/*
+ * Quality Gate
+ */
+
+.overview-quality-gate-badge-large {
+  padding: calc(2 * var(--gridSize));
+  color: white;
+  box-sizing: border-box;
+}
+
+.overview-quality-gate-badge-large.failed {
+  background: var(--red);
+}
+
+.overview-quality-gate-badge-large.success {
+  background: var(--green);
+  height: 160px;
+}
+
+.overview-quality-gate-badge-large h3 {
+  color: white;
+}
+
+.overview-quality-gate-conditions {
+  padding-bottom: calc(2 * var(--gridSize));
+}
+
+.overview-quality-gate-conditions-project-name {
+  padding: var(--gridSize) 0 var(--gridSize) calc(2 * var(--gridSize));
+  font-size: var(--bigFontSize);
+  background: var(--barBorderColor);
+}
+
+.overview-quality-gate-conditions-section-title {
+  padding: calc(2 * var(--gridSize)) calc(2 * var(--gridSize)) var(--gridSize)
+    calc(2 * var(--gridSize));
+  border-bottom: 1px solid var(--barBorderColor);
+  margin: 0;
+  font-size: var(--baseFontSize);
+}
+
+.overview-quality-gate-conditions-list {
+  margin-bottom: calc(2 * var(--gridSize));
+}
+
+.overview-quality-gate-conditions-list-collapse {
+  margin: calc(2 * var(--gridSize)) 0;
+}
+
+.overview-quality-gate-condition,
+.overview-quality-gate-condition:hover {
+  display: block;
+  color: var(--baseFontColor);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.overview-quality-gate-condition:hover {
+  background-color: var(--rowHoverHighlight);
+}
+
+.overview-quality-gate-condition-container {
+  padding: calc(1.5 * var(--gridSize)) var(--gridSize) calc(1.5 * var(--gridSize))
+    calc(4 * var(--gridSize));
+  border-bottom: 1px solid var(--barBorderColor);
+}
+
+.overview-quality-gate-condition-value {
+  line-height: 1;
+  margin-right: 10px;
+  font-size: var(--bigFontSize);
+
+  /* for consistency with ratings */
+  min-width: 24px;
+}
+
+.overview-quality-gate-condition-value span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*
+ * Animations
+ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+ * PRs and SLBs
+ */
+
+.pr-overview {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.pr-overview.has-conditions {
+  max-width: 1260px;
+}
+
+.pr-overview-failed-conditions {
+  flex: 0 0 240px;
+}
+
+.pr-overview .overview-quality-gate-condition:first-of-type {
+  margin-top: 0;
+}
+
+.pr-overview .overview-quality-gate-condition {
+  margin-top: 12px;
+  background-color: #fff;
+  border-left: 5px solid;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.pr-overview .overview-quality-gate-condition-error {
+  border-color: var(--red);
+}
+
+.pr-overview .overview-quality-gate-condition-warn {
+  border-color: var(--orange);
+}
+
+.pr-overview .overview-quality-gate-condition:hover .overview-quality-gate-condition-container,
+.pr-overview .overview-quality-gate-condition:focus .overview-quality-gate-condition-container {
+  border-color: inherit;
+}
+
+.pr-overview .overview-quality-gate-condition-metric,
+.pr-overview .overview-quality-gate-condition-period {
+  display: block;
+  max-width: 125px;
+  line-height: 16px;
+  font-size: var(--smallFontSize);
+}
+
+.pr-overview .overview-quality-gate-condition-container {
+  min-width: 150px;
+  /* three lines by 16px and 4px margin */
+  min-height: 52px;
+  padding: var(--gridSize);
+  border-top: 1px solid var(--barBorderColor);
+  border-right: 1px solid var(--barBorderColor);
+  transition: border-color 0.3s ease;
+}
+
+.pr-overview .overview-quality-gate-condition-value {
+  font-size: var(--hugeFontSize);
+}
+
+.pr-overview .overview-quality-gate-badge-large {
+  width: 240px;
+  min-height: 160px;
+  color: var(--transparentWhite);
+}
+
+.pr-pverview .overview-measures-row {
+  min-height: 85px;
+}
+
+.pr-overview .overview-measures-aside {
+  flex-basis: 270px;
+}
+
+@media (max-width: 1200px) {
+  .pr-overview .overview-measures-aside {
+    flex-basis: 220px;
+  }
+}
+
+/*
+ * ACTIVITY
+ */
+
+.overview-panel .activity-graph-legends {
+  text-align: right;
+  margin-top: -30px;
+}
+
+.overview-analysis {
+  color: var(--secondFontColor);
+}
+
+.overview-analysis + .overview-analysis {
+  margin-top: calc(2 * var(--gridSize));
+}
+
+.overview-activity-events {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.overview-analysis-event {
+  display: inline-block;
+}
+
+.overview-analysis-event.badge {
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: var(--smallFontSize);
+  letter-spacing: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.overview-analysis-event + .overview-analysis-event {
+  margin-top: 4px;
+}
+
+.overview-panel .activity-graph-container {
+  min-height: 200px;
+  padding-bottom: 0;
+}

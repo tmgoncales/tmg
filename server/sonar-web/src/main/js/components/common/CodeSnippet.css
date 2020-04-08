@@ -1,0 +1,80 @@
+/*
+ * SonarQube
+ * Copyright (C) 2009-2020 SonarSource SA
+ * mailto:info AT sonarsource DOT com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+.code-snippet {
+  position: relative;
+  margin: var(--gridSize) 0;
+  background: var(--gray40);
+  color: var(--snippetFontColor);
+  border-radius: 3px;
+}
+
+.code-snippet pre {
+  padding: calc(2 * var(--gridSize));
+  overflow: auto;
+}
+
+.code-snippet > button {
+  position: absolute;
+  top: calc(2 * var(--gridSize));
+  right: calc(2 * var(--gridSize));
+  line-height: 18px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 11px;
+  font-weight: normal;
+  user-select: none;
+}
+
+.code-snippet > button:hover,
+.code-snippet > button:focus,
+.code-snippet > button:active {
+  background-color: #fff;
+  color: var(--gray40);
+}
+
+.code-snippet-oneline pre {
+  padding-bottom: 40px;
+}
+
+.code-snippet-oneline > button {
+  top: auto;
+  bottom: 16px;
+}
+
+.code-snippet-wrap pre {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.code-snippet .highlight {
+  font-weight: bold;
+  color: var(--alertBorderError);
+}
+
+.code-snippet .button-icon {
+  color: #fff !important;
+}
+
+.code-snippet .button-icon:hover svg,
+.code-snippet .button-icon:focus svg,
+.code-snippet .button-icon:active svg {
+  background-color: #fff;
+  color: var(--gray40);
+}

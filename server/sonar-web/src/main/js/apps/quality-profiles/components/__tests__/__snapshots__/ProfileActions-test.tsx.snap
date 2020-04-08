@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with all permissions 1`] = `
+<Fragment>
+  <ActionsDropdown>
+    <ActionsDropdownItem
+      to={
+        Object {
+          "pathname": "/organizations/org/rules",
+          "query": Object {
+            "activation": "false",
+            "qprofile": "key",
+          },
+        }
+      }
+    >
+      <span
+        data-test="quality-profiles__activate-more-rules"
+      >
+        quality_profiles.activate_more_rules
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      download="key.xml"
+      to="/api/qualityprofiles/backup?language=js&qualityProfile=name&organization=org"
+    >
+      <span
+        data-test="quality-profiles__backup"
+      >
+        backup_verb
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      to={
+        Object {
+          "pathname": "/organizations/org/quality_profiles/compare",
+          "query": Object {
+            "language": "js",
+            "name": "name",
+          },
+        }
+      }
+    >
+      <span
+        data-test="quality-profiles__compare"
+      >
+        compare
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      onClick={[Function]}
+    >
+      <span
+        data-test="quality-profiles__copy"
+      >
+        copy
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      onClick={[Function]}
+    >
+      <span
+        data-test="quality-profiles__extend"
+      >
+        extend
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      onClick={[Function]}
+    >
+      <span
+        data-test="quality-profiles__rename"
+      >
+        rename
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      onClick={[Function]}
+    >
+      <span
+        data-test="quality-profiles__set-as-default"
+      >
+        set_as_default
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownDivider />
+    <ActionsDropdownItem
+      destructive={true}
+      onClick={[Function]}
+    >
+      <span
+        data-test="quality-profiles__delete"
+      >
+        delete
+      </span>
+    </ActionsDropdownItem>
+  </ActionsDropdown>
+</Fragment>
+`;
+
+exports[`renders with no permissions 1`] = `
+<Fragment>
+  <ActionsDropdown>
+    <ActionsDropdownItem
+      download="key.xml"
+      to="/api/qualityprofiles/backup?language=js&qualityProfile=name&organization=org"
+    >
+      <span
+        data-test="quality-profiles__backup"
+      >
+        backup_verb
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      to={
+        Object {
+          "pathname": "/organizations/org/quality_profiles/compare",
+          "query": Object {
+            "language": "js",
+            "name": "name",
+          },
+        }
+      }
+    >
+      <span
+        data-test="quality-profiles__compare"
+      >
+        compare
+      </span>
+    </ActionsDropdownItem>
+  </ActionsDropdown>
+</Fragment>
+`;
+
+exports[`renders with permission to edit only 1`] = `
+<Fragment>
+  <ActionsDropdown>
+    <ActionsDropdownItem
+      to={
+        Object {
+          "pathname": "/organizations/org/rules",
+          "query": Object {
+            "activation": "false",
+            "qprofile": "key",
+          },
+        }
+      }
+    >
+      <span
+        data-test="quality-profiles__activate-more-rules"
+      >
+        quality_profiles.activate_more_rules
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      download="key.xml"
+      to="/api/qualityprofiles/backup?language=js&qualityProfile=name&organization=org"
+    >
+      <span
+        data-test="quality-profiles__backup"
+      >
+        backup_verb
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      to={
+        Object {
+          "pathname": "/organizations/org/quality_profiles/compare",
+          "query": Object {
+            "language": "js",
+            "name": "name",
+          },
+        }
+      }
+    >
+      <span
+        data-test="quality-profiles__compare"
+      >
+        compare
+      </span>
+    </ActionsDropdownItem>
+    <ActionsDropdownItem
+      onClick={[Function]}
+    >
+      <span
+        data-test="quality-profiles__rename"
+      >
+        rename
+      </span>
+    </ActionsDropdownItem>
+  </ActionsDropdown>
+</Fragment>
+`;
